@@ -1,0 +1,9 @@
+<Expander Name="myExpander" Background="Tan"
+          HorizontalAlignment="Left" Header="My Expander" 
+          ExpandDirection="Down" IsExpanded="True">
+    <TextBlock TextWrapping="Wrap">
+Lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua
+    </TextBlock>
+</Expander>

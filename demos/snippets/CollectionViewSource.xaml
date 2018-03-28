@@ -1,0 +1,18 @@
+<CollectionViewSource x:Key="FontFamilyCollection"
+                      xmlns:drawing="clr-namespace:System.Drawing;assembly=System.Drawing"
+                      xmlns:cm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+                      Source="{Binding Source={x:Static drawing:FontFamily.Families}}">
+    <CollectionViewSource.SortDescriptions>
+        <cm:SortDescription PropertyName="Name" />
+    </CollectionViewSource.SortDescriptions>
+</CollectionViewSource>
+
+<ComboBox ItemsSource="{Binding Source={StaticResource FontFamilyCollection}}" >
+    <ComboBox.ItemTemplate>
+        <DataTemplate>
+            <TextBlock Text="{Binding Name}" MinWidth="70"
+                       FontFamily="{Binding Name, FallbackValue='Arial'}" FontSize="14"
+                       ToolTip="{Binding Name}" />
+        </DataTemplate>
+    </ComboBox.ItemTemplate>
+</ComboBox>

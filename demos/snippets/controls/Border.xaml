@@ -1,0 +1,6 @@
+<Border Background="LightBlue" BorderBrush="Black" 
+        BorderThickness="2" CornerRadius="45" 
+        Padding="25" />
+
+<Border Background="LightBlue" BorderBrush="Black" 
+		BorderThickness="2,4,6,8" CornerRadius="45" Margin="10" />

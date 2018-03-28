@@ -1,0 +1,17 @@
+<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Image Source="./Cherry.jpg" />
+</ScrollViewer>
+
+<DockPanel LastChildFill="True">
+    <Slider x:Name="slider" DockPanel.Dock="Top" Minimum="0.02" Maximum="3" Value="1" />
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+        <Image Source="./Cherry.jpg" Stretch="None">
+            <Image.LayoutTransform>
+                <ScaleTransform ScaleX="{Binding Value, Source={x:Reference slider}}"
+                                ScaleY="{Binding Value, Source={x:Reference slider}}" />
+            </Image.LayoutTransform>
+        </Image>
+    </ScrollViewer>
+</DockPanel>

@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfBasics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Tip app">
+    <Grid>
+        <Label HorizontalAlignment="Left" Margin="31,10,0,0" Content="Bill:" VerticalAlignment="Top"/>
+        <TextBox x:Name="billBox" Height="23" Margin="64,13,300,0" VerticalAlignment="Top" Text="10" />
+        
+        <Label Content="Tip (%):" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="tipSlider" Margin="64,47,300,0" VerticalAlignment="Top"
+                Minimum="0" Maximum="100" Value="10"
+                AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" IsSnapToTickEnabled="True" TickFrequency="5" />
+        
+        <Label Content="Split:" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="64,76,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+                <sys:Int16>1</sys:Int16>
+                <sys:Int16>2</sys:Int16>
+                <sys:Int16>3</sys:Int16>
+                <sys:Int16>4</sys:Int16>
+                <sys:Int16>5</sys:Int16>
+        </ComboBox>
+        
+        <Button Content="Calculate" HorizontalAlignment="Left" Margin="64,130,0,0" VerticalAlignment="Top" Width="134" Height="28" Click="Button_Click"/>
+        
+        <TextBlock x:Name="totalBox" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" Text="The total goes here" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

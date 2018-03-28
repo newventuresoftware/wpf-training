@@ -1,0 +1,34 @@
+<ListView>
+    <ListView.View>
+        <GridView>
+            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding [0]}" />
+            <GridViewColumn Header="Age" DisplayMemberBinding="{Binding [1]}" />
+        </GridView>
+    </ListView.View>
+    <ListView.Items>
+        <ListViewItem>
+            <x:Array Type="{x:Type sys:String}">
+                <sys:String>John</sys:String>
+                <sys:String>20</sys:String>
+            </x:Array>
+        </ListViewItem>
+        <ListViewItem>
+            <x:Array Type="{x:Type sys:String}">
+                <sys:String>Peter</sys:String>
+                <sys:String>32</sys:String>
+            </x:Array>
+        </ListViewItem>
+    </ListView.Items>
+</ListView>
+
+<ListView>
+    <ListView.View>
+        <GridView>
+            <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
+            <GridViewColumn Header="Age" Width="50" DisplayMemberBinding="{Binding Age}" />
+            <GridViewColumn Header="Mail" Width="150" DisplayMemberBinding="{Binding Mail}" />
+        </GridView>
+    </ListView.View>
+</ListView>
+
+<GridView AllowsColumnReorder="True" />

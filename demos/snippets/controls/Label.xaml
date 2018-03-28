@@ -1,0 +1,15 @@
+<Label Content="Name" />
+<Label Content="Name">
+    <Label.ContentTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Width="20" Height="20" Fill="Black" />
+                <TextBlock Text="{Binding}" />
+            </StackPanel>
+        </DataTemplate>
+    </Label.ContentTemplate>
+</Label>
+
+<!--Access key-->
+<TextBox x:Name="nameTbx" />
+<Label Content="_Name" Target="{x:Reference nameTbx}" />

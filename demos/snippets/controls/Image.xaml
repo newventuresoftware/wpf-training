@@ -1,0 +1,22 @@
+<Image Source="./Cherry.jpg" Stretch="None" />
+<Image Source="./Cherry.jpg" Stretch="Fill" StretchDirection="DownOnly" />
+<Image Source="./Cherry.jpg" Stretch="Uniform" StretchDirection="UpOnly" />
+<Image Source="./Cherry.jpg" Stretch="UniformToFill" StretchDirection="Both" />
+
+<Image>
+    <Image.Source>
+        <BitmapImage UriSource="./Cherry.jpg" />
+    </Image.Source>
+</Image>
+
+<CroppedBitmap SourceRect="110 90 90 90">
+    <CroppedBitmap.Source>
+        <BitmapImage UriSource="./Cherry.jpg" />
+    </CroppedBitmap.Source>
+</CroppedBitmap>
+
+<FormatConvertedBitmap DestinationFormat="Gray8">
+    <FormatConvertedBitmap.Source>
+        <BitmapImage UriSource="./Cherry.jpg" />
+    </FormatConvertedBitmap.Source>
+</FormatConvertedBitmap>

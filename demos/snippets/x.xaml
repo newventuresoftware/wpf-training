@@ -1,0 +1,11 @@
+<x:Array Type="{x:Type Color}">
+    <x:Static Member="Colors.Red" />
+    <Color>Green</Color>
+</x:Array>
+
+<x:Array Type="{x:Type sys:Int32}"
+         xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:Int32>1</sys:Int32>
+    <sys:Int32>2</sys:Int32>
+    <sys:Int32>3</sys:Int32>
+</x:Array>

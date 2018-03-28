@@ -1,0 +1,24 @@
+<TextBox Text="Hello" />
+<TextBox Text="The quick brown fox jumps over the lazy dog. 1234567890"
+         FontFamily="Times New Roman" FontSize="20pt" FontStyle="Italic" FontWeight="Bold" />
+
+<!--Multi-line-->
+<TextBox AcceptsReturn="True" TextWrapping="Wrap" />
+<TextBox AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" MinLines="2" MaxLines="5" />
+<TextBox AcceptsReturn="True" TextWrapping="Wrap" MinLines="2" MaxLines="5"
+         VerticalScrollBarVisibility="Auto" />
+
+<!--Spell check-->
+<TextBox SpellCheck.IsEnabled="True" Language="en-US" />
+
+<!--Read only-->
+<TextBox Text="Hello" IsReadOnly="True" IsReadOnlyCaretVisible="False" />
+
+<!--Selection-->
+<TextBox Text="Hello" SelectionStart="1" SelectionLength="3" SelectionBrush="Red" SelectionOpacity="0.3" />
+
+<TextBox Text="Hello" TextChanged="TextBox_TextChanged" />
+private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+{
+
+}

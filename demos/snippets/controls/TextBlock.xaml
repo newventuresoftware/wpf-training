@@ -1,0 +1,24 @@
+<TextBlock Text="Hello" />
+<TextBlock Text="The quick brown fox jumps over the lazy dog. 1234567890"
+           FontFamily="Times New Roman" FontSize="20pt" FontStyle="Italic" FontWeight="Bold" />
+           
+<TextBlock Text="The quick brown fox jumps over the lazy dog. 1234567890" Width="300" Height="60" TextWrapping="Wrap"
+           FontFamily="Times New Roman" FontSize="20pt" FontStyle="Italic" FontWeight="Bold" />
+<TextBlock Text="The quick brown fox jumps over the lazy dog. 1234567890" Width="300" TextTrimming="WordEllipsis"
+           FontFamily="Times New Roman" FontSize="20pt" FontStyle="Italic" FontWeight="Bold" />
+
+<!--Inlines-->
+<TextBlock>
+    <Run Text="Hello " /><Run Text="{Binding Name}" FontWeight="Bold" /><Run Text="!" />
+</TextBlock>
+
+<TextBlock>
+    This <Span FontWeight="Bold">is</Span> a
+    <Span Background="Silver" Foreground="Maroon">TextBlock</Span>
+    with <Span TextDecorations="Underline">several</Span>
+    <Span FontStyle="Italic">Span</Span> elements,
+    <LineBreak/>
+    <Span Foreground="Blue">
+            using a <Bold>variety</Bold> of <Italic>styles</Italic>
+    </Span>.
+</TextBlock>

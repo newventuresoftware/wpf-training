@@ -1,0 +1,16 @@
+<CheckBox IsChecked="True">Enable feature XYZ</CheckBox>
+<CheckBox IsChecked="True" Content="Enable feature XYZ" />
+<CheckBox IsChecked="{x:Null}" Content="Enable feature XYZ" IsThreeState="True" />
+
+<CheckBox Content="Enable feature XYZ"
+          Command="{Binding ToggleCommand}" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" />
+
+<CheckBox Content="Enable feature XYZ"
+          Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"
+          Indeterminate="CheckBox_Checked"
+          Click="CheckBox_Checked" />
+
+private void CheckBox_Checked(object sender, RoutedEventArgs e)
+{
+
+}

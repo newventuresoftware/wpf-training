@@ -1,0 +1,7 @@
+<Viewbox Width="100" Height="50">
+    <Rectangle Fill="Red" Width="20" Height="20" />
+</Viewbox>
+
+<Viewbox Width="100" Height="40" Stretch="Uniform">
+    <TextBlock Text="Hello!" />
+</Viewbox>

@@ -1,0 +1,2 @@
+<Rectangle Width="100" Height="40" Fill="Black" Stroke="Red" StrokeThickness="2" />
+<Rectangle Width="100" Height="40" Stroke="Red" StrokeThickness="2" StrokeDashArray="3 2" />

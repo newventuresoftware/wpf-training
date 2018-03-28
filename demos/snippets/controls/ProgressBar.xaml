@@ -1,0 +1,3 @@
+<ProgressBar Maximum="100" Minimum="0" Value="30" />
+<ProgressBar Maximum="100" Minimum="0" Value="30" Orientation="Horizontal" />
+<ProgressBar IsIndeterminate="True"/>

@@ -1,0 +1,21 @@
+<ToolBarTray VerticalAlignment="Top">
+    <ToolBar>
+        <Button Command="New" Content="New" />
+        <Button Command="Open" Content="Open" />
+    </ToolBar>
+    <ToolBar>
+        <Button Command="Undo" Content="Undo" />
+        <Button Command="Redo" Content="Redo" />
+        <Button>
+            <Button.Content>
+                <Image Source="./Cherry.jpg" Width="20" Height="20" />
+            </Button.Content>
+        </Button>
+        <Separator />
+        <RadioButton Content="Option 1" />
+        <RadioButton Content="Option 1" />
+        <Separator />
+        <ToggleButton Content="Toggle Functionality" />
+        <Button Command="Delete" Content="Delete" ToolBar.OverflowMode="Always" />
+    </ToolBar>
+</ToolBarTray>

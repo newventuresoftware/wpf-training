@@ -1,0 +1,44 @@
+<ListBox>
+    <ListBoxItem Content="Item 1" IsSelected="True" />
+    <ListBoxItem Content="Item 2" />
+    <ListBoxItem Content="Item 3" />
+</ListBox>
+
+<ListBox ItemsSource="{Binding Source={StaticResource FontFamilyCollection}}">
+    <ListBox.Resources>
+        <CollectionViewSource x:Key="FontFamilyCollection"
+                        xmlns:drawing="clr-namespace:System.Drawing;assembly=System.Drawing"
+                        xmlns:cm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+                        Source="{Binding Source={x:Static drawing:FontFamily.Families}}">
+            <CollectionViewSource.SortDescriptions>
+                <cm:SortDescription PropertyName="Name" />
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+    </ListBox.Resources>
+
+    <ListBox.ItemTemplate>
+        <DataTemplate>
+            <TextBlock Text="{Binding Name}" MinWidth="70"
+                FontFamily="{Binding Name, FallbackValue='Arial'}" FontSize="14"
+                ToolTip="{Binding Name}" />
+        </DataTemplate>
+    </ListBox.ItemTemplate>
+</ListBox>
+
+<ListBox AlternationCount="2">
+    <ListBox.ItemContainerStyle>
+        <Style TargetType="{x:Type ListBoxItem}">
+            <Style.Triggers>
+                <Trigger Property="ListBox.AlternationIndex" Value="1">
+                    <Setter Property="Background" Value="LightGray" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </ListBox.ItemContainerStyle>
+</ListBox>
+
+<ListBox SelectionMode="Multiple" SelectionChanged="ListBox_SelectionChanged" />
+private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    
+}

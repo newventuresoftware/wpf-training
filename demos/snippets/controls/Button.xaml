@@ -1,0 +1,19 @@
+<Button>A button</Button>
+<Button Content="A button" />
+
+<Button FontWeight="Bold">
+    <WrapPanel>
+        <TextBlock Foreground="Blue">Multi</TextBlock>
+        <TextBlock Foreground="Red">Color</TextBlock>
+        <TextBlock>Button</TextBlock>
+    </WrapPanel>
+</Button>
+
+<RepeatButton Content="click" ClickMode="Press" Click="Button_Click" />
+
+<Button Content="click" ClickMode="Press" Click="Button_Click" />
+
+private void Button_Click(object sender, RoutedEventArgs e)
+{
+    
+}

@@ -1,0 +1,10 @@
+<TabControl>
+    <TabItem Header="Tab1">
+        <Button Content="One" />
+    </TabItem>
+    <TabItem Header="Tab2">
+        <Button Content="Two" />
+    </TabItem>
+</TabControl>
+
+<TabControl TabStripPlacement="Bottom" />

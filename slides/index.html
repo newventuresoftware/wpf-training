@@ -1,0 +1,1041 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Telerik UI for WPF</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href=" css/style.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section id="main" data-background="./img/telerik-bg.jpg">
+                <h2 class="title">Telerik UI for WPF</h2>
+                <div>
+                    <img alt="" src="./img/wpf-banner-bg.png" class="no-border" width="320" style="padding-top: 38px; padding-bottom: 38px;" />
+                    <img alt="" src="./img/telerik-ninja.png" class="no-border" width="130" style="padding-left: 50px; padding-right: 50px; margin-bottom: 25px" />
+                </div> 
+            </section>
+            <section id="speaker-and-company-info" data-background="./img/telerik-bg.jpg">
+                <section>
+                    <h3>Welcome</h3>
+                    <h4>Progress Virtual Classroom</h4>
+                    <img alt="" width="700" src="./img/virtual-academy.jpg" class="no-border" />
+                    <aside class="notes">
+                        <ul>
+                            <li>Welcome to virtual classroom</li>
+                            <li>The motivation for virtual classroom.</li>
+                            <li>Together with colegues.</li>
+                            <li>Post any question, comments and issus</li>
+                        </ul>
+                        <p>I am very proud to welcome you to this virtual classroom. Progress has a long history of providing tools to make developers happy and successful. They have great UI components, superb documentation, the very best support and now with Virtual Classroom - the very best training at no additional cost. This is a free training program for Telerik active license holders.</p>
+                    </aside>
+                </section>
+                <section id="training-schedule">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><strong>Date</strong></td>
+                                <td><strong>Time</strong></td>
+                                <td><strong>Course</strong></td>
+                            </tr>
+                            <tr class="passed-training">
+                                <td>February 28, 2018</td>
+                                <td>9am - 1pm EST<strong></strong></td>
+                                <td><strong>Kendo UI &amp; Angular</strong></td>
+                            </tr>
+                            <tr class="passed-training">
+                                <td>March 7, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Telerik UI for ASP.NET MVC and ASP.NET Core</strong></td>
+                            </tr>
+                            <tr class="passed-training">
+                                <td>March 8, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Kendo UI &amp; React</strong></td>
+                            </tr>
+                            <tr class="passed-training">
+                                <td>March 14, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Kendo UI &amp; jQuery</strong></td>
+                            </tr>
+                            <tr class="passed-training">
+                                <td>March 22, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Kendo UI &amp; Vue</strong></td>
+                            </tr>
+                            <tr class="passed-training">
+                                <td>March 27, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Telerik UI for Xamarin</strong></td>
+                            </tr>
+                            <tr class="current-training">
+                                <td>March 30, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Telerik UI for WPF</strong></td>
+                            </tr>
+                            <tr>
+                                <td>April 5, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Telerik Reporting &amp; Telerik Report Server</strong></td>
+                            </tr>
+                            <tr>
+                                <td>April 10, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Telerik UI for WinForms</strong><strong></strong></td>
+                            </tr>
+                            <tr>
+                                <td>April 12, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Telerik UI for ASP.NET AJAX</strong><strong></strong></td>
+                            </tr>
+                            <tr>
+                                <td>April 13, 2018</td>
+                                <td>9am - 1pm EST</td>
+                                <td><strong>Telerik UI for UWP</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <aside class="notes">
+                        <ul>
+                            <li>Virtual classroom is a training program for all DevCraft major products</li>
+                            <li>30 hours of content in partnership with NVS</li>
+                            <li>This program is designed to get you quickly onboarded</li>
+                            <li>What has passed and what is to come</li>
+                            <li>All of the recordings, videos, slides and demos will be available to you</li>
+                        </ul>
+                        <p>We have prepared more than 30 hours for technical content for you in partnership with New Venture Software. This program is designed to get you quickly onboarded with our developer tools whether you have been using them for years or are completely new to the suite. In each session we are going to provide practical knowledge, helpful approaches, we will focus on the best practices in order to get you started with application development. All of the recordings, videos, slides and demos will be available to you after the training is complete.</p>
+                    </aside>
+                </section>
+                <section id="speaker-info">
+                    <div class="speaker-img-container">
+                        <img alt="" src="./img/speaker.jpg" width="200" />
+                        <h4>Yavor Ivanov</h4>
+                    </div>
+                    <table class="speaker-contact-info">
+                        <tbody>
+                            <tr>
+                                <td><img alt="" class="no-border" src="./img/email.png" width="50"></td>
+                                <td style="vertical-align:middle"> <a href="mailto:yavor@newventuresoftware.com?Subject=Hello" target="_blank">yavor@newventuresoftware.com</a></td>
+                            </tr>
+                            <tr>
+                                <td><img alt="" class="no-border" src="./img/web.png" width="50"></td>
+                                <td style="vertical-align:middle"> <a href="https://www.newventuresoftware.com/blog" target="_blank">www.newventuresoftware.com/blog</a></td>
+                            </tr>
+                            <tr>
+                                <td><img alt="" class="no-border" src="./img/github.png" width="50"></td>
+                                <td style="vertical-align:middle"> <a href="https://github.com/yavor87" target="_blank">github.com/yavor87</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <aside class="notes">
+                        <ul>
+                            <li>About myself and my experience</li>
+                            <li>Helped build the DevCraft suite</li>
+                            <li>Any feedback, suggestions or need help</li>
+                            <li>Contact info</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section data-background="./img/Training-intro-slide.jpg">
+                    <aside class="notes">
+                            <h2>New Venture Software</h2>
+                            <p>
+                                A premium consulting and professional services partner for Progress Telerik products and technologies.
+                            </p>
+                        </aside>
+                </section>
+                <section id="nvs-partners" data-background="./img/Training-intro-slide+bullets.jpg">
+                    <aside class="notes">
+                        <ol>
+                            <li>
+                                Most of us are ex-Progress software architects who have led a number of teams building the Telerik DevCraft suite.
+                            </li>
+                            <li>
+                                We support all progress Telerik products and technologies be it for the web, desktop or mobile.
+                            </li>
+                            <li>
+                                Successful track record of delivering future-proof software consulting and development solutions.
+                            </li>
+                            <li>
+                                My teammates and I feel honoured and excited to have the opportunity to share our experience and passion about the Telerik technologies.
+                            </li>
+                        </ol>
+                    </aside>
+                </section>
+            </section>
+            <section id="agenda" class="color-white" data-background-image="./img/school-board.jpg">
+                <h3>Agenda</h3>
+                <ul>
+                    <li class="fragment">Getting started with WPF</li>
+                    <li class="fragment">MVVM</li>
+                    <li class="fragment">Customizing</li>
+                    <li class="fragment">Telerik UI for WPF</li>
+                </ul>
+            </section>
+            <section id="wpf-intro">
+                <section data-background="./img/ready-to-start-org.jpg">
+                </section>
+                <section>
+                    <h3>WPF benefits</h3>
+                    <ol class="present">
+                        <li class="fragment">Clear separation between the UI and logic</li>
+                        <li class="fragment">UI customization &amp; graphics</li>
+                        <li class="fragment">Data binding</li>
+                        <li class="fragment">Easier implementation for the MVVM pattern</li>
+                        <li class="fragment"><i>&#34;There is no control for that&#34;</i> no longer applies</li>
+                        <li class="fragment">Runs on <u>every</u> Windows</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>XAML</h3>
+<pre><code data-noescape>&lt;Window x:Class=&quot;WpfApp.MainWindow&quot;
+        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+        xmlns:local=&quot;clr-namespace:WpfApp&quot;
+        Title=&quot;MainWindow&quot;&gt;
+    &lt;Grid&gt;
+        &lt;TextBlock x:Name=&quot;textBlock&quot; HorizontalAlignment=&quot;Center&quot;
+                   VerticalAlignment=&quot;Center&quot;
+                   Text=&quot;Hello!&quot; /&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;
+</code></pre>
+                    <aside class="notes">
+                        Xml elements -> object elements
+                        Xml attributes -> C# property -> property attributes
+                    </aside>
+                </section>
+                <section>
+                    <h3>XAML</h3>
+<pre><code data-noescape>&lt;Window x:Class=&quot;WpfApp.MainWindow&quot;
+        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+        xmlns:local=&quot;clr-namespace:WpfApp&quot;
+        Title=&quot;MainWindow&quot;&gt;
+    &lt;Grid&gt;
+        &lt;TextBlock x:Name=&quot;textBlock&quot; HorizontalAlignment=&quot;Center&quot;
+           VerticalAlignment=&quot;Center&quot;&gt;
+            &lt;TextBlock.Text&gt;
+                Hello!
+            &lt;/TextBlock.Text&gt;
+        &lt;/TextBlock&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;</code></pre>
+                    <aside class="notes">
+                        Xml element -> C# property -> property element
+                    </aside>
+                </section>
+                <section>
+                    <h3>Code behind</h3>
+<pre><code class="cs">using System.Windows;
+
+namespace WpfApp
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+    }
+}</code></pre>
+                </section>
+                <section>
+                    <h3>The generated part</h3>
+<pre><code class="cs">public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector
+{
+    internal System.Windows.Controls.TextBlock textBlock;
+     
+    private bool _contentLoaded;
+    
+    public void InitializeComponent() {
+        if (_contentLoaded) {
+            return;
+        }
+        _contentLoaded = true;
+        System.Uri resourceLocater = new System.Uri(&quot;/WpfApp;component/mainwindow.xaml&quot;, System.UriKind.Relative);
+        
+        System.Windows.Application.LoadComponent(this, resourceLocater);
+    }
+    
+    void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
+        switch (connectionId)
+        {
+            case 1:
+            this.textBlock = ((System.Windows.Controls.TextBlock)(target));
+            return;
+        }
+        this._contentLoaded = true;
+    }
+}</code></pre>
+                </section>
+                <section>
+                    <h3>Type converters</h3>
+<pre><code data-noescape>&lt;TextBlock Foreground=&quot;Black&quot;&gt;</code></pre>
+<pre><code data-noescape>&lt;TextBlock
+    &lt;TextBlock.Foreground&gt;
+        &lt;SolidColorBrush&gt;Black&lt;/SolidColorBrush&gt;
+    &lt;/TextBlock.Foreground&gt;
+&lt;/TextBlock&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Type converters</h3>
+<pre><code class="cs">public sealed class BrushConverter : TypeConverter
+{
+    public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
+    {
+      if (sourceType == typeof(string))
+        return true;
+      return base.CanConvertFrom(context, sourceType);
+    }
+
+    public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
+    {
+      string str = value as string;
+      if (str != null)
+        return Brush.Parse(str, context);
+      return base.ConvertFrom(context, culture, value);
+    }
+}</code></pre>
+                </section>
+                <section>
+                    <h3>Xaml Namespaces</h3>
+<pre><code data-noescape>&lt;Window x:Class=&quot;WpfApp4.MainWindow&quot;
+        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:local=&quot;clr-namespace:WpfApp;assembly=SDKSampleLibrary&quot;&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Markup Extensions</h3>
+<pre><code data-noescape>&lt;TextBlock Text=&quot;{x:Static local:MainWindow.Text}&quot; /&gt;</code></pre>
+                    <aside class="notes">
+                        <p>Attribute value that starts with a curly bracket is a Markup Extension</p>
+                        <ul>
+                            <li>x:Type</li>
+                            <li>x:Static</li>
+                            <li>x:Null</li>
+                            <li>x:Array</li>
+                            <li>StaticResource</li>
+                            <li>DynamicResource</li>
+                            <li>Binding</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Naming elements</h3>
+<pre><code data-noescape>&lt;Button x:Name=&quot;okButton&quot;&gt;OK&lt;/Button&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Accessing visuals in code behind</h3>
+<pre><code class="cs">public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+
+        okButton.Foreground = Brushes.Red;
+    }
+}</code></pre>
+                </section>
+                <section>
+                    <h3>Handling events</h3>
+<pre><code class="cs">public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            okButton.Click += OnOkButtonClicked;
+        }
+
+        private void OnOkButtonClicked(object sender, RoutedEventArgs e)
+        {
+            
+        }
+    }</code></pre>
+                </section>
+                <section>
+                    <h3>Handling events</h3>
+<pre><code data-noescape>&lt;Button x:Name=&quot;okButton&quot; Click=&quot;OnOkButtonClicked&quot;&gt;OK&lt;/Button&gt;</code></pre>
+                </section>
+                <section data-background-color="#000">
+                    <h3>Live Coding - XAML basics</h3>
+                    <h4>Objectives</h4>
+                    <ul class="present">
+                        <li class="fragment">XAML</li>
+                        <li class="fragment">Code behind</li>
+                        <li class="fragment">Add controls</li>
+                        <li class="fragment">Access controls from code behind</li>
+                        <li class="fragment">Wire events</li>
+                    </ul>
+                    <aside class="notes">
+                        <em>Demonstrate app <b>WpfBasics</b></em>
+                    </aside>
+                </section>
+                <section data-background-color="#fff">
+                    <img class="no-border" src="./img/element-classdiagram.png" width="750" />
+                    <aside class="notes">
+                        Important classes in the WPF hierarchy:
+                        <ul>
+                            <li>DispatcherObject: The base class meant for any object that wishes to be accessed only on the thread that created it. Most WPF classes derive from DispatcherObject and are therefore inherently thread-unsafe.</li>
+                            <li>DependencyObject: The base class for any object that can support dependency properties</li>
+                            <li>Freezable: The base class for objects that can be “frozen” into a read-only state for performance reasons. Freezables, once frozen, can be safely shared among multiple threads, unlike all other DispatcherObjects.</li>
+                            <li>Visual: The base class for all objects that have their own 2D visual representation.</li>
+                            <li>UIElement: The base class for all 2D visual objects with support for routed events, command binding, layout, and focus.</li>
+                            <li>FrameworkElement: The base class that adds support for styles, data binding, resources, and a few common mechanisms for Windows-based controls, such as tooltips and context menus.</li>
+                            <li>Control: The base class for familiar controls such as Button, ListBox, and StatusBar. Control adds many properties to its FrameworkElement base class, such as Foreground, Background, and FontSize, as well as the ability to be completely restyled.</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Dependency Property</h3>
+                    <ul class="present">
+                        <li class="fragment">Enables data binding</li>
+                        <li class="fragment">Set trough style</li>
+                        <li class="fragment">Default value</li>
+                        <li class="fragment">Value validation</li>
+                        <li class="fragment">Animation</li>
+                        <li class="fragment">Change Monitoring</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Logical and visual tree</h3>
+<pre><code data-noescape>&lt;Window&gt;
+  &lt;StackPanel&gt;
+    &lt;Label Content=&quot;WPF trainging&quot; /&gt;
+    &lt;Label&gt;Yavor Ivanov&lt;/Label&gt;
+    &lt;Label&gt;Agenda&lt;/Label&gt;
+    &lt;ListBox&gt;
+      &lt;ListBoxItem&gt;Topic 1&lt;/ListBoxItem&gt;
+      &lt;ListBoxItem&gt;Topic 2&lt;/ListBoxItem&gt;
+    &lt;/ListBox&gt;
+    &lt;StackPanel Orientation=&quot;Horizontal&quot; HorizontalAlignment=&quot;Center&quot;&gt;
+      &lt;Button MinWidth=&quot;75&quot; Margin=&quot;10&quot;&gt;Help&lt;/Button&gt;
+      &lt;Button MinWidth=&quot;75&quot; Margin=&quot;10&quot;&gt;OK&lt;/Button&gt;
+    &lt;/StackPanel&gt;
+    &lt;StatusBar&gt;You have successfully registered.&lt;/StatusBar&gt;
+  &lt;/StackPanel&gt;
+&lt;/Window&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Logical tree</h3>
+                    <img class="no-border" src="./img/logical-tree.jpg" />
+                    <aside class="notes">
+                        <p>Every aspect of WPF (properties, events, resources, and so on) has behavior tied to the logical tree. For example, property values are sometimes propagated down the tree to child elements automatically, and raised events can travel up or down the tree.</p>
+                        <p>The logical tree exposed by WPF is a simplification of what is actually going on when the elements are rendered. The entire tree of elements actually being rendered is called the visual tree</p>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Visual tree</h3>
+                    <img class="no-border" src="./img/visual-tree.jpg" width="750" />
+                    <aside class="notes">
+                        <p>You can think of the visual tree as an expansion of a logical tree, in which nodes are broken down into their core visual components. Rather than leaving each element as a “black box,” a visual tree exposes the visual implementation details. For example, although a ListBox is logically a single control, its default visual representation is composed of more primitive WPF elements: a Border, two ScrollBars, and more.</p>
+                        <p>Not all logical tree nodes appear in the visual tree; only the elements that derive from System.Windows.Media.Visual or System.Windows.Media.Visual3D are included</p>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Routed Events</h3>
+                    <img class="no-border" src="./img/wpf_tunnel_bubble.png" />
+                    <aside class="notes">
+                        <p>A routed event is a type of event that can invoke handlers on multiple listeners in an element tree, rather than just on the object that raised the event. A routed event is a CLR event that is backed by an instance of the RoutedEvent class and is processed by the Windows Presentation Foundation (WPF) event system.</p>
+                        <p>The event route can travel in one of two directions depending on the event definition, but generally the route travels from the source element and then "bubbles" upward through the element tree until it reaches the element tree root (typically a page or a window)</p>
+                        <p>Routed events enable you to attach that handler only once and use handler logic to determine where the event came from if necessary. Routed events permit a static handler that is defined by the class. This class handler has the opportunity to handle an event before any attached instance handlers can.</p>
+                        Routing Strategies
+                        <ul>
+                            <li>Bubbling: Event handlers on the event source are invoked. The routed event then routes to successive parent elements until reaching the element tree root. Most routed events use the bubbling routing strategy. Bubbling routed events are generally used to report input or state changes from distinct controls or other UI elements.</li>
+                            <li>Tunneling: Initially, event handlers at the element tree root are invoked. The routed event then travels a route through successive child elements along the route, towards the node element that is the routed event source (the element that raised the routed event). Tunneling routed events are often used or handled as part of the compositing for a control, such that events from composite parts can be deliberately suppressed or replaced by events that are specific to the complete control. Input events provided in WPF often come implemented as a tunneling/bubbling pair. Tunneling events are also sometimes referred to as Preview events, because of a naming convention that is used for the pairs.</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section data-background-color="#000">
+                    <h3>Live Demonstration</h3>
+                    <h4>Routed Events</h4>
+                    <aside class="notes">
+                        <em>Demonstrate app <b>WpfRoutedApp</b></em>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Sizing and Positioning</h3>
+                </section>
+                <section>
+                    <h3>Box Model</h3>
+                    <img class="no-border" src="./img/boxmodel.png" />
+                    <aside class="notes">
+                        <p>Thickness syntax</p>
+                        <p>Positioning: Horizontal and VerticalAlignment</p>
+                        <p>Content Positioning: Horizontal and VerticalContentAlignment</p>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Panels</h3>
+                </section>
+                <section>
+                    <img class="no-border" src="./img/stack-panel.png" height="300" />
+                    <pre><code data-noescape>&lt;StackPanel Orientation=&quot;Vertical&quot;&gt;
+    &lt;Button Content=&quot;Button1&quot; /&gt;
+    &lt;Button Content=&quot;Button2&quot; /&gt;
+    &lt;Button Content=&quot;Button3&quot; /&gt;
+&lt;/StackPanel&gt;</code></pre>
+                </section>
+                <section>
+                    <img class="no-border" src="./img/grid-panel.png" height="240" />
+                    <pre><code data-noescape>&lt;Grid&gt;
+    &lt;Grid.RowDefinitions&gt;
+        &lt;RowDefinition Height=&quot;*&quot; /&gt;
+        &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+    &lt;/Grid.RowDefinitions&gt;
+    &lt;Grid.ColumnDefinitions&gt;
+        &lt;ColumnDefinition Width=&quot;200&quot; /&gt;
+        &lt;ColumnDefinition /&gt;
+    &lt;/Grid.ColumnDefinitions&gt;
+    &lt;Label Grid.Row=&quot;0&quot; Grid.Column=&quot;0&quot; Content=&quot;First&quot; Background=&quot;LightBlue&quot; /&gt;
+    &lt;Label Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Content=&quot;Second&quot; Background=&quot;Yellow&quot; /&gt;
+    &lt;Label Grid.Row=&quot;1&quot; Grid.ColumnSpan=&quot;2&quot; Content=&quot;Third&quot; Background=&quot;Pink&quot; /&gt;
+&lt;/Grid&gt;</code></pre>
+                </section>
+                <section>
+                    <img class="no-border" src="./img/dock-panel.png" height="300" />
+                    <pre><code data-noescape>&lt;DockPanel LastChildFill=&quot;True&quot;&gt;
+    &lt;Label DockPanel.Dock=&quot;Top&quot; Content=&quot;Dock = Top&quot; Background=&quot;LightBlue&quot; /&gt;
+    &lt;Label DockPanel.Dock=&quot;Top&quot; Height=&quot;50&quot; Content=&quot;Dock = Top&quot; Background=&quot;LightBlue&quot; /&gt;
+    &lt;Label DockPanel.Dock=&quot;Bottom&quot; Content=&quot;Dock = Bottom&quot; Background=&quot;Yellow&quot; /&gt;
+    &lt;Label DockPanel.Dock=&quot;Left&quot; Width=&quot;200&quot; Content=&quot;Dock = Left&quot; Background=&quot;LightGreen&quot; /&gt;
+    &lt;Label Content=&quot;This content will Fill&quot; /&gt;
+&lt;/DockPanel&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>WrapPanel</h3>
+                    <img class="no-border" src="./img/wrap-panel.png" height="300" />
+                    <pre><code data-noescape>&lt;WrapPanel ItemWidth=&quot;250&quot; ItemHeight=&quot;150&quot;&gt;
+    &lt;Label Content=&quot;Label One&quot; Background=&quot;LightBlue&quot; /&gt;
+    &lt;Label Content=&quot;Label Two&quot; Background=&quot;Yellow&quot; /&gt;
+    &lt;Label Content=&quot;Label Three&quot; Background=&quot;Pink&quot; /&gt;
+&lt;/WrapPanel&gt;</code></pre>
+                </section>
+                <section>
+                    <img class="no-border" src="./img/canvas-panel.png" height="300" />
+                    <pre><code data-noescape>&lt;Canvas&gt;
+    &lt;Border Width=&quot;100&quot; Height=&quot;100&quot; Background=&quot;Red&quot; /&gt;
+    &lt;Border Canvas.Left=&quot;150&quot; Canvas.Top=&quot;150&quot; Width=&quot;100&quot; Height=&quot;100&quot; Background=&quot;Green&quot; /&gt;
+    &lt;Border Canvas.Left=&quot;75&quot; Canvas.Top=&quot;75&quot; Width=&quot;100&quot; Height=&quot;100&quot; Background=&quot;Blue&quot; /&gt;
+&lt;/Canvas&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Controls</h3>
+                    <table style="font-size: 24px;">
+                        <tr><td>Border</td><td>Button</td><td>Calendar</td></tr>
+                        <tr><td>CheckBox</td><td>ComboBox</td><td>ContentControl</td></tr>
+                        <tr><td>DataGrid</td><td>DatePicker</td><td>DocumentViewer</td></tr>
+                        <tr><td>Ellipse</td><td>Expander</td><td>Frame</td></tr>
+                        <tr><td>GroupBox</td><td>Image</td><td>Label</td></tr>
+                        <tr><td>ListBox</td><td>ListView</td><td>MediaElement</td></tr>
+                        <tr><td>Menu</td><td>PasswordBox</td><td>ProgressBar</td></tr>
+                        <tr><td>RadioButton</td><td>Rectangle</td><td>RichTextBox</td></tr>
+                        <tr><td>ScrollBar</td><td>ScrollViewer</td><td>Separator</td></tr>
+                        <tr><td>Slider</td><td>StatusBar</td><td>TabControl</td></tr>
+                        <tr><td>TextBlock</td><td>TextBox</td><td>ToggleButton</td></tr>
+                        <tr><td>ToolBar</td><td>ToolBarTray</td><td>TreeView</td></tr>
+                        <tr><td>ViewBox</td><td>WebBrowser</td><td>WindowsFormsHost</td></tr>
+                    </table>
+                </section>
+                <section>
+                    <h3>Images</h3>
+<pre><code data-noescape>&lt;Image Source=&quot;./Cherry.jpg&quot; Stretch=&quot;None&quot; /&gt;
+
+&lt;Image&gt;
+    &lt;Image.Source&gt;
+        &lt;BitmapImage UriSource=&quot;./Cherry.jpg&quot; /&gt;
+    &lt;/Image.Source&gt;
+&lt;/Image&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>ImageSource</h3>
+                    <code>System.Windows.Media.ImageSource</code>
+                    <aside class="notes">
+                        <a href="https://msdn.microsoft.com/en-us/library/system.windows.media.imagesource(v=vs.110).aspx">MSDN</a>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Image Stretch</h3>
+                    <img class="no-border" src="./img/IC40182.jpeg" />
+                    <aside class="notes">
+                        <p>
+                            <em>Stretch</em>
+                            <ul>
+                                <li>None: The content preserves its original size.</li>
+                                <li>Uniform: The content is resized to fit in the destination dimensions while it preserves its native aspect ratio.</li>
+                                <li>UniformToFill: The content is resized to fill the destination dimensions while it preserves its native aspect ratio. If the aspect ratio of the destination rectangle differs from the source, the source content is clipped to fit in the destination dimensions.</li>
+                                <li>Fill: The content is resized to fill the destination dimensions. The aspect ratio is not preserved.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <em>StretchDirection</em>
+                            <ul>
+                                <li>Both: The content stretches to fit the parent according to the Stretch mode.</li>
+                                <li>DownOnly: The content scales downward only when it is larger than the parent. If the content is smaller, no scaling upward is performed.</li>
+                                <li>UpOnly: The content scales upward only when it is smaller than the parent. If the content is larger, no scaling downward is performed.</li>
+                            </ul>
+                        </p>
+                    </aside>
+                </section>
+                <section data-background-color="#000">
+                    <h3>Live Demonstration</h3>
+                    <h4>Zooming an image</h4>
+                    <aside class="notes">
+                        <em>Demonstrate app <b>WpfImageApp</b></em>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Brushes</h3>
+                </section>
+                <section>
+                    <h3>Solid Color</h3>
+<pre><code data-noescape>&lt;SolidColorBrush Color=&quot;Red&quot; /&gt;
+&lt;SolidColorBrush Color=&quot;#ffe0e0&quot; /&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Linear gradient</h3>
+<pre><code data-noescape>&lt;LinearGradientBrush StartPoint=&quot;0,0&quot; EndPoint=&quot;1,1&quot; &gt;
+    &lt;GradientStop Color=&quot;Blue&quot; Offset=&quot;0&quot; /&gt;
+    &lt;GradientStop Color=&quot;Red&quot; Offset=&quot;1.0&quot; /&gt;
+&lt;/LinearGradientBrush&gt;</code></pre>
+                    <img src="./img/linear.png" />
+                </section>
+                <section>
+                    <h3>Radial gradient</h3>
+<pre><code data-noescape>&lt;RadialGradientBrush GradientOrigin=&quot;0.5,0.5&quot; Center=&quot;0.5,0.5&quot;
+                     RadiusX=&quot;0.5&quot; RadiusY=&quot;0.5&quot;&gt;
+    &lt;RadialGradientBrush.GradientStops&gt;
+        &lt;GradientStop Color=&quot;Blue&quot; Offset=&quot;0&quot; /&gt;
+        &lt;GradientStop Color=&quot;Red&quot; Offset=&quot;1.0&quot; /&gt;
+    &lt;/RadialGradientBrush.GradientStops&gt;
+&lt;/RadialGradientBrush&gt;</code></pre>
+                    <img src="./img/radial.png" />
+                </section>
+                <section>
+                    <h3>Image brush</h3>
+<pre><code data-noescape>&lt;ImageBrush ImageSource=&quot;Cherry.jpg&quot; TileMode=&quot;Tile&quot;
+            Viewport=&quot;0,0,0.3,0.5&quot;
+            ViewportUnits=&quot;RelativeToBoundingBox&quot;/&gt;</code></pre>
+                    <img src="./img/tile.png" />
+                </section>
+                <section>
+                    <h3>Styles</h3>
+<pre><code data-noescape>&lt;Style x:Key=&quot;buttonStyle&quot; TargetType=&quot;{x:Type Button}&quot;&gt;
+    &lt;Setter Property=&quot;FontSize&quot; Value=&quot;22&quot;/&gt;
+    &lt;Setter Property=&quot;Background&quot; Value=&quot;Purple&quot;/&gt;
+    &lt;Setter Property=&quot;Foreground&quot; Value=&quot;White&quot;/&gt;
+    &lt;Setter Property=&quot;Height&quot; Value=&quot;50&quot;/&gt;
+    &lt;Setter Property=&quot;Width&quot; Value=&quot;50&quot;/&gt;
+&lt;/Style&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Resources</h3>
+<pre><code data-noescape>&lt;Window.Resources&gt;
+    &lt;SolidColorBrush x:Key=&quot;backgroundBrush&quot;&gt;Yellow&lt;/SolidColorBrush&gt;
+    &lt;BitmapImage x:Key=&quot;myImage&quot; UriSource=&quot;./Cherry.jpg&quot; /&gt;
+    &lt;sys:Double x:Key=&quot;imgWidth&quot;&gt;100&lt;/sys:Double&gt;
+    &lt;sys:Double x:Key=&quot;imgHeight&quot;&gt;150&lt;/sys:Double&gt;
+&lt;/Window.Resources&gt;</code></pre>
+                    <aside class="notes">
+                        <p>Image is added with build action <b>Resource</b></p>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Using Resources</h3>
+<pre><code data-noescape>&lt;Grid Background=&quot;{DynamicResource backgroundBrush}&quot;&gt;
+    &lt;Image Source=&quot;{StaticResource myImage}&quot;
+           Width=&quot;{StaticResource imgWidth}&quot;
+           Height=&quot;{StaticResource imgHeight}&quot; /&gt;
+&lt;/Grid&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Style inheritance</h3>
+<pre><code data-noescape>&lt;Style x:Key=&quot;baseButtonStyle&quot; TargetType=&quot;{x:Type ButtonBase}&quot;&gt;
+    &lt;Setter Property=&quot;Height&quot; Value=&quot;50&quot; /&gt;
+    &lt;Setter Property=&quot;Width&quot; Value=&quot;50&quot; /&gt;
+    &lt;Setter Property=&quot;FontSize&quot; Value=&quot;8pt&quot; /&gt;
+&lt;/Style&gt;
+
+&lt;Style x:Key=&quot;buttonStyle&quot; TargetType=&quot;{x:Type Button}&quot;
+       BasedOn=&quot;{StaticResource baseButtonStyle}&quot;&gt;
+    &lt;Setter Property=&quot;Background&quot; Value=&quot;Purple&quot; /&gt;
+    &lt;Setter Property=&quot;Foreground&quot; Value=&quot;White&quot; /&gt;
+&lt;/Style&gt;
+
+&lt;Style x:Key=&quot;toggleButtonStyle&quot; TargetType=&quot;{x:Type ToggleButton}&quot;
+       BasedOn=&quot;{StaticResource baseButtonStyle}&quot;&gt;
+    &lt;Setter Property=&quot;Background&quot; Value=&quot;Yellow&quot; /&gt;
+    &lt;Setter Property=&quot;Foreground&quot; Value=&quot;Red&quot; /&gt;
+&lt;/Style&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Applying Styles</h3>
+<pre><code data-noescape>&lt;Button Content=&quot;Button&quot;
+        Style=&quot;{StaticResource buttonStyle}&quot;/&gt;
+&lt;ToggleButton Content=&quot;Toggle&quot;
+              Style=&quot;{StaticResource toggleButtonStyle}&quot;/&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Implicit styles</h3>
+<pre><code data-noescape>&lt;Style TargetType=&quot;{x:Type Button}&quot;
+       BasedOn=&quot;{StaticResource buttonStyle}&quot;&gt;
+&lt;/Style&gt;
+
+&lt;Style TargetType=&quot;{x:Type ToggleButton}&quot;
+       BasedOn=&quot;{StaticResource toggleButtonStyle}&quot;&gt;
+&lt;/Style&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Style triggers</h3>
+<pre><code data-noescape>&lt;Style x:Key=&quot;buttonStyle&quot; TargetType=&quot;{x:Type Button}&quot;&gt;
+    ...
+    &lt;Style.Triggers&gt;
+        &lt;Trigger Property=&quot;IsMouseOver&quot; Value=&quot;True&quot;&gt;
+            &lt;Setter Property=&quot;FontStyle&quot; Value=&quot;Italic&quot; /&gt;
+        &lt;/Trigger&gt;
+    &lt;/Style.Triggers&gt;
+&lt;/Style&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Data Binding</h3>
+                    <img class="no-border" src="./img/binding.png" />
+                    <aside class="notes">
+                        <a href="http://blog.scottlogic.com/2012/04/20/everything-you-wanted-to-know-about-databinding-in-wpf-silverlight-and-wp7-part-two.html">More information</a>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Data Binding</h3>
+                    <ul class="present">
+                        <li class="fragment" data-fragment-index="0">Source</li>
+                        <li class="fragment" data-fragment-index="0">Target<span class="fragment">: <code>DependencyObject</code></span></li>
+                        <li class="fragment">Target Property<span class="fragment">: <strong>Dependency property</strong></span></li>
+                        <li class="fragment">DataContext</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Data Binding</h3>
+                    <img class="no-border" src="./img/BindingMarkup.png" />
+                </section>
+                <section>
+                    <h3>Binding Target examples:</h3>
+                    <ul class="present">
+                        <li class="fragment">Text of a TextView</li>
+                        <li class="fragment">Text of a TextBox</li>
+                        <li class="fragment">Value of a Slider</li>
+                        <li class="fragment">Source of a ListView</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Binding Source examples:</h3>
+                    <ul class="present">
+                        <li class="fragment">Another control (Slider, TextBox): <code>{Binding ElementName=slider}</code><code class="fragment">{x:Reference Name=slider}</code></li>
+                        <li class="fragment">Static property: <code>{x:Static local:NamedColor.All}</code></li>
+                        <li class="fragment">Object (ViewModel): <code>{Binding FirstName}</code></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Binding Mode</h3>
+                    <ul class="present">
+                        <li class="fragment">OneTime</li>
+                        <li class="fragment">OneWay</li>
+                        <li class="fragment">OneWayToSource</li>
+                        <li class="fragment">TwoWay</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Data templates</h3>
+                </section>
+                <section>
+                    <h3>ItemsControl</h3>
+<pre><code data-noescape>&lt;ItemsControl ItemsSource=&quot;{StaticResource primes}&quot; Width=&quot;350&quot;&gt;
+    &lt;ItemsControl.ItemsPanel&gt;
+        &lt;ItemsPanelTemplate&gt;
+            &lt;WrapPanel ItemWidth=&quot;150&quot; ItemHeight=&quot;30&quot;
+                       Orientation=&quot;Horizontal&quot; /&gt;
+        &lt;/ItemsPanelTemplate&gt;
+    &lt;/ItemsControl.ItemsPanel&gt;
+    &lt;ItemsControl.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;StackPanel Orientation=&quot;Horizontal&quot; Margin=&quot;0 3&quot;&gt;
+                &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;25 0&quot; /&gt;
+                &lt;Button Content=&quot;Click&quot; /&gt;
+            &lt;/StackPanel&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ItemsControl.ItemTemplate&gt;
+&lt;/ItemsControl&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>ContentControl</h3>
+<pre><code data-noescape>&lt;ContentControl Content=&quot;{Binding Path=[1], Source={StaticResource primes}}&quot;&gt;
+    &lt;ContentControl.ContentTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;StackPanel Orientation=&quot;Horizontal&quot; Margin=&quot;0 3&quot;&gt;
+                &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;25 0&quot; /&gt;
+                &lt;Button Content=&quot;Click&quot; /&gt;
+            &lt;/StackPanel&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ContentControl.ContentTemplate&gt;
+&lt;/ContentControl&gt;</code></pre>
+                </section>
+                <section>
+                    <h3>Automatic Data template selection</h3>
+<pre><code data-noescape>&lt;ContentControl Content=&quot;{Binding Path=[2], Source={StaticResource brushes}}&quot;&gt;
+    &lt;ContentControl.Resources&gt;
+        &lt;DataTemplate DataType=&quot;{x:Type SolidColorBrush}&quot;&gt;
+            &lt;TextBlock Text=&quot;{Binding StringFormat=&apos;This is a solid color {0}&apos;}&quot;
+                Background=&quot;{Binding}&quot; Padding=&quot;25 0&quot; /&gt;
+        &lt;/DataTemplate&gt;
+        &lt;DataTemplate DataType=&quot;{x:Type LinearGradientBrush}&quot;&gt;
+            &lt;TextBlock Text=&quot;This is a linear gradient!&quot;
+                Background=&quot;{Binding}&quot; Padding=&quot;25 0&quot; /&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ContentControl.Resources&gt;
+&lt;/ContentControl&gt;</code></pre>
+                </section>
+                <section data-background-color="#000">
+                    <h3>Live Coding - Data Binding</h3>
+                    <h4>Objectives</h4>
+                    <ul class="present">
+                        <li class="fragment">Data binding syntax</li>
+                        <li class="fragment">Dependency properties</li>
+                        <li class="fragment">Bind to other view elements</li>
+                    </ul>
+                    <aside class="notes">
+                        <em>Demonstrate app <b>WpfTemplateApp</b></em>
+                        <ul>
+                            <li>ContentControlExample</li>
+                            <li>ItemsControlExample</li>
+                            <li>ItemsControlExample - Switch to ListView</li>
+                            <li>TreeExample</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="wpf-threading">
+                    <h3>Executing code in the Background</h3>
+                </section>
+                <section>
+                    <img class="no-border" src="./img/44848-122254-With-out-Dispatcher.png" />
+                    <p class="fragment">Can't update UI from any thread</p>
+                </section>
+                <section>
+                    <img class="no-border" src="./img/44848-122652-Disptacher.png" />
+                    <p class="fragment">UI updates are done only on <em>Dispatcher</em> thread</p>
+                </section>
+                <section data-background-color="#000">
+                    <h3>Live Demonstration</h3>
+                    <h4>Executing code in the Background</h4>
+                    <aside class="notes">
+                        <em>Demonstrate app WpfBackgroundApp</em>
+                    </aside>
+                </section>
+                <section id="data-options">
+                    <h3>Loading data</h3>
+                </section>
+                <section>
+                    <h3>Web Services</h3>
+                    <ul class="present">
+                        <li class="fragment">ASMX</li>
+                        <li class="fragment">WCF</view>
+                        <li class="fragment">REST</li>
+                        <li class="fragment">Azure Mobile App</li>
+                        <li class="fragment">Amazon Web Services</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Consuming RESTful web service</h3>
+                    <ul class="present">
+                        <li class="fragment">HttpClient</li>
+                        <li class="fragment">NewtonSoft JSON.NET library</view>
+                        <li class="fragment">RestSharp</view>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Consuming RESTful web service</h3>
+                    <pre><code class="cs">var client = new RestClient(&quot;http://api.thenounproject.com/&quot;);
+client.Authenticator = OAuth1Authenticator.ForRequestToken(apiKey, apiSecret);
+var iconsRequest = new RestRequest(&quot;collection/{id}&quot;, Method.GET)
+                .AddUrlSegment(&quot;id&quot;, id);
+                
+var response = await _client.ExecuteTaskAsync(iconsRequest);
+if (response.StatusCode == 200)
+{
+    string content = response.Content;
+}</code></pre>
+                </section>
+                <section>
+                    <h3>Databases</h3>
+                    <ul class="present">
+                        <li class="fragment">ADO.NET</li>
+                        <li class="fragment">Entity Framework</view>
+                    </ul>
+                </section>
+                <section>
+                    <h3>MVVM</h3>
+                    <img class="no-border" src="./img/mvvm.png" />
+                </section>
+                <section>
+                    <h3>MVVM frameworks</h3>
+                    <ul>
+                        <li class="fragment" data-fragment-index="0">Prism</li>
+                        <li class="fragment" data-fragment-index="1">MvvmCross</li>
+                        <li class="fragment" data-fragment-index="2">Telerik</li>
+                    </ul>
+                </section>
+            </section>
+            <section id="telerik-intro">
+                <section class="color-white" data-background="./img/umbrella-bg.jpg">
+                    <h3>Why choose Telerik</h3>
+                    <ul class="present">
+                        <li class="fragment">120+ UI Components</li>
+                        <li class="fragment">Build with performance in mind</li>
+                        <li class="fragment">MVVM support</li>
+                        <li class="fragment">Design-time support</li>
+                        <li class="fragment">Modern Professional Themes</li>
+                    </ul>
+                </section>
+                <section data-background="./img/Getting+Started.png">
+                    <h3>Installing Telerik components for WPF</h3>
+                    <ul class="present">
+                        <li class="fragment">Setup <b>TelerikUIForWpfSetup_b_version.exe</b></li>
+                        <li class="fragment">MSI installer</li>
+                        <li class="fragment">ZIP archive for manual installation</li>
+                        <li class="fragment">Nuget: <b>https://nuget.telerik.com/nuget</b></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>XAML vs NoXAML</h3>
+                    <aside class="notes">
+                        <p>The Xaml dlls contain the same code as the NoXaml ones, but they hold also all the styles and templates of the UI controls, for all themes. This means that they are bigger in size compared to the NoXaml ones.</p>
+                    </aside>
+                </section>
+            </section>
+            <section>
+                <section id="telerik-components" data-background-color="#EFF8FF">
+                    <div style="display: flex; font-size: 18px; justify-content: center">
+                        <div style="margin-right: 10px;">
+                            <strong style="display: table; margin-bottom: 10px;">WPF UI Controls</strong>
+                            <ul>
+                                <li>Data Management</li>
+                                <li>Data Visualization</li>
+                                <li>Scheduling</li>
+                                <li>Layout</li>
+                                <li>Navigation</li>
+                                <li>Media</li>
+                                <li>Editors</li>
+                                <li>File Upload &amp; Management</li>
+                                <li>Interactivity &amp; UX</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        <a href="https://www.telerik.com/products/wpf/overview.aspx">Overview</a>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Let's explore!</h3>
+                    <img alt="" class="no-border" src="./img/cartoon-scuba-diver-hi.png">
+                </section>
+                <section data-background-color="#000">
+                    <h3>Live Coding - Telerik UI</h3>
+                    <h4>Objectives</h4>
+                    <ul class="present">
+                        <li class="fragment">Visualize data with RadGridView</li>
+                        <li class="fragment">Edit data with RadDataForm</li>
+                        <li class="fragment">Create graphs with RadCartesianChart</li>
+                    </ul>
+                    <aside class="notes">
+                        <em>Demonstrate app <b>DbApp</b></em>
+                    </aside>
+                </section>
+            </section>
+            </section>
+            <section>
+                <section data-background="./img/bg-pattern.png">
+                    <h3>Themes</h3>
+                    <aside class="notes">
+                        <p>The UI for WPF suite comes with a variety of predefined themes which you can apply to your application. Some of the themes have different color variations so the variety you can choose from is even greater.</p>
+                        <a href="https://docs.telerik.com/devtools/wpf/styling-and-appearance/themes-suite/common-styling-appearance-list-of-themes">Documentation</a>
+                    </aside>
+                </section>
+            </section>
+            <section id="questions">
+                <h3>Questions?</h3>
+                <img class="" src="./img/cats-staring.jpg" width="500" />
+            </section>
+            <section id="end">
+                <h2>Thank You!</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img class="no-border" src="./img/email.png" style="width:70px"></td>
+                            <td style="vertical-align:middle"> <a href="mailto:yavor@newventuresoftware.com?Subject=Hello" target="_blank">yavor@newventuresoftware.com</a></td>
+                        </tr>
+                        <tr>
+                            <td><img class="no-border" src="./img/github.png" width="70"></td>
+                            <td style="vertical-align:middle"> <a href="https://github.com/yavor87" target="_blank">github.com/yavor87</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <section class="reveal-shared">
+            <div class="nvs-logo-container">
+                <a href="http://www.newventuresoftware.com/" target="_blank">
+                    <img class="no-border" src="./img/nvs-logo.svg" width="150"/>
+                </a>
+            </div>
+            <div class="progress-logo-container">
+                <img alt="" src="./img/progress-watermarks/Progress_Logos_Telerik-WPF_vertical.png" class="no-border" width="250" />
+            </div>
+            <div class="nvs-website-bar">
+                <span class="nvs-website-text brackets">www.newventuresoftware.com</span>
+                <small style="float: right; margin-right: 20px;">
+                    &copy; 2018 Progress Software Corporation and/or its subsidiaries or affiliates. All rights reserved.
+                </small>
+            </div>
+        </section>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+         // More info about config & dependencies:
+         // - https://github.com/hakimel/reveal.js#configuration
+         // - https://github.com/hakimel/reveal.js#dependencies
+         Reveal.initialize({
+            history: true,
+            progress: true,
+            touch: true,
+            transition: 'fade-in',
+            dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+            ],
+            slideNumber: 'c/t'
+         });
+     </script>
+ </body>
+ </html>

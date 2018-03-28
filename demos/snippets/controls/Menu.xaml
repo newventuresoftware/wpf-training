@@ -1,0 +1,50 @@
+<Menu>
+    <MenuItem Header="_FILE">
+        <MenuItem Header="_OPEN" Click="MenuItemOpen_Click" />
+    </MenuItem>
+    <MenuItem Header="_EDIT">
+        <MenuItem Header="_CUT" />
+    </MenuItem>
+</Menu>
+
+<Menu>
+    <MenuItem Header="_FILE">
+        <MenuItem Command="{x:Static ApplicationCommands.Open}" />
+        <Separator />
+        <MenuItem Command="{x:Static ApplicationCommands.Save}" />
+        <MenuItem Command="{x:Static ApplicationCommands.SaveAs}" />
+        <Separator />
+        <MenuItem Command="{x:Static ApplicationCommands.Print}" />
+        <Separator />
+        <MenuItem Command="{x:Static ApplicationCommands.Close}" />
+    </MenuItem>
+    <MenuItem Header="_EDIT">
+        <MenuItem Command="{x:Static ApplicationCommands.Undo}" />
+        <MenuItem Command="{x:Static ApplicationCommands.Redo}" />
+        <Separator />
+        <MenuItem Command="{x:Static ApplicationCommands.Cut}" />
+        <MenuItem Command="Copy" />
+        <MenuItem Command="Paste" />
+    </MenuItem>
+</Menu>
+
+<Menu>
+    <MenuItem Header="_EDIT">
+        <MenuItem Header="_Open">
+            <MenuItem.Icon>
+                <Image Source="Cherry.jpg" />
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem Header="_CUT" />
+            <MenuItem Header="Option">
+                <MenuItem IsCheckable="True" Header="Option 1" />
+                <MenuItem IsCheckable="True" Header="Option 2" />
+                <MenuItem IsCheckable="True" Header="Option 3" />
+            </MenuItem>
+    </MenuItem>
+</Menu>
+
+private void MenuItemOpen_Click(object sender, RoutedEventArgs e)
+{
+
+}

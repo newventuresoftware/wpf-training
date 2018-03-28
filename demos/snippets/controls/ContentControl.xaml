@@ -1,0 +1,33 @@
+<ContentControl>
+    <ContentControl.Content>
+        <sys:Int32 xmlns:sys="clr-namespace:System;assembly=mscorlib">11</sys:Int32>
+    </ContentControl.Content>
+    <ContentControl.ContentTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal" Margin="0 3">
+                <TextBlock Text="{Binding}" Margin="25 0" />
+                <Button Content="Click" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentControl.ContentTemplate>
+</ContentControl>
+
+<ContentControl>
+    <ContentControl.Content>
+        <!--<SolidColorBrush>Red</SolidColorBrush>-->
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Red" Offset="0" />
+            <GradientStop Color="Blue" Offset="1" />
+        </LinearGradientBrush>
+    </ContentControl.Content>
+    <ContentControl.Resources>
+        <DataTemplate DataType="{x:Type SolidColorBrush}">
+            <TextBlock Text="{Binding StringFormat='This is a solid color {0}'}"
+                       Background="{Binding}" Padding="25 0" />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type LinearGradientBrush}">
+            <TextBlock Text="This is a linear gradient!"
+                       Background="{Binding}" Padding="25 0" />
+        </DataTemplate>
+    </ContentControl.Resources>
+</ContentControl>

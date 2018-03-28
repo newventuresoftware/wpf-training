@@ -1,0 +1,9 @@
+<Slider Maximum="100" Minimum="0" Value="60" />
+<Slider Maximum="100" Minimum="0" Value="60" Orientation="Vertical"/>
+
+<Slider SmallChange="1" LargeChange="5" />
+
+<Slider TickPlacement="BottomRight" />
+<Slider TickPlacement="TopLeft" IsSnapToTickEnabled="True" />
+
+<Slider AutoToolTipPlacement="TopLeft" />

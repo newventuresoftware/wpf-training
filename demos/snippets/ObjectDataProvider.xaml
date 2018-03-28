@@ -1,0 +1,9 @@
+<ObjectDataProvider x:Key="orientationEnum" MethodName="GetValues"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    ObjectType="{x:Type sys:Enum}">
+    <ObjectDataProvider.MethodParameters>
+        <x:Type TypeName="Orientation"/>
+    </ObjectDataProvider.MethodParameters>
+</ObjectDataProvider>
+
+<ComboBox ItemsSource="{Binding Source={StaticResource orientationEnum}}" />

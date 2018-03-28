@@ -1,0 +1,37 @@
+<Calendar DisplayMode="Decade" />
+
+<Calendar>
+    <Calendar.BlackoutDates>
+        <CalendarDateRange Start="3/1/2018" End="3/7/2018"/>
+        <CalendarDateRange Start="3/8/2018" End="3/8/2018"/>
+        <CalendarDateRange Start="3/15/2018" End="3/15/2018"/>
+        <CalendarDateRange Start="3/22/2018" End="3/22/2018"/>
+        <CalendarDateRange Start="3/29/2018" End="3/29/2018"/>
+    </Calendar.BlackoutDates>
+</Calendar>
+
+<Calendar DisplayDate="3/1/2018"
+          DisplayDateStart="3/1/2018"
+          DisplayDateEnd="3/31/2018" />
+
+<Calendar FirstDayOfWeek="Tuesday" IsTodayHighlighted="True"/>
+
+<Calendar xmlns:sys="clr-namespace:System;assembly=mscorlib" SelectionMode="MultipleRange">
+    <Calendar.SelectedDates>
+        <sys:DateTime>3/5/2018</sys:DateTime>
+        <sys:DateTime>3/15/2018</sys:DateTime>
+        <sys:DateTime>3/25/2018</sys:DateTime>
+    </Calendar.SelectedDates>
+</Calendar>
+
+<Calendar SelectionMode="SingleRange" SelectedDatesChanged="Calendar_SelectedDatesChanged" />
+private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+{
+	IEnumerable<DateTime> selectedDates = e.AddedItems.Cast<DateTime>();
+}
+
+<Calendar SelectionMode="SingleRange" DisplayDateChanged="Calendar_DisplayDateChanged" />
+private void Calendar_DisplayDateChanged(object sender, CalendarDateChangedEventArgs e)  
+{
+
+}

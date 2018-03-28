@@ -1,0 +1,26 @@
+<StackPanel>
+    <RadioButton IsChecked="True">Enable feature XYZ</RadioButton>
+    <RadioButton IsChecked="True" Content="Enable feature XYZ" />
+</StackPanel>
+
+<!--Group name-->
+<StackPanel>
+    <RadioButton GroupName="Os" Content="Windows XP" IsChecked="True"/>
+    <RadioButton GroupName="Os" Content="Windows Vista" />
+    <RadioButton GroupName="Os" Content="Windows 7" />
+    <RadioButton GroupName="Office" Content="Microsoft Office 2007" IsChecked="True"/>
+    <RadioButton GroupName="Office" Content="Microsoft Office 2003"/>
+    <RadioButton GroupName="Office" Content="Open Office"/>
+</StackPanel>
+
+<RadioButton Content="Enable feature XYZ"
+             Command="{Binding ToggleCommand}" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" />
+
+<RadioButton Content="Enable feature XYZ"
+             Checked="RadioButton_Checked" Unchecked="RadioButton_Checked"
+             Click="RadioButton_Checked" />
+
+private void RadioButton_Checked(object sender, RoutedEventArgs e)
+{
+
+}

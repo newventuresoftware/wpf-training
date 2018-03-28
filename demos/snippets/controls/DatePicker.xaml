@@ -1,0 +1,19 @@
+<DatePicker DisplayDate="05/03/2018" />
+<DatePicker DisplayDate="05/03/2018" DisplayDateStart="05/01/2018" DisplayDateEnd="05/20/2018" />
+<DatePicker>
+    <DatePicker.BlackoutDates>
+        <CalendarDateRange Start="3/1/2018" End="3/7/2018" />
+        <CalendarDateRange Start="3/8/2018" End="3/8/2018" />
+        <CalendarDateRange Start="3/15/2018" End="3/15/2018" />
+        <CalendarDateRange Start="3/22/2018" End="3/22/2018" />
+        <CalendarDateRange Start="3/29/2018" End="3/29/2018" />
+    </DatePicker.BlackoutDates>
+</DatePicker>
+
+<DatePicker FirstDayOfWeek="Tuesday" IsTodayHighlighted="True" />
+
+<DatePicker SelectedDateChanged="DatePicker_SelectedDateChanged" />
+private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+{
+
+}

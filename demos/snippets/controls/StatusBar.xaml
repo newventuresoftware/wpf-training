@@ -1,0 +1,11 @@
+<StatusBar>
+    <StatusBarItem DockPanel.Dock="Left">
+        <TextBlock Text="Ready" />
+    </StatusBarItem>
+    <StatusBarItem DockPanel.Dock="Right">
+        <ProgressBar Width="100" Height="16" Value="10" />
+    </StatusBarItem>
+    <StatusBarItem DockPanel.Dock="Right" Margin="0 0 100 0" HorizontalAlignment="Right">
+        <TextBlock Text="Ln 26" />
+    </StatusBarItem>
+</StatusBar>

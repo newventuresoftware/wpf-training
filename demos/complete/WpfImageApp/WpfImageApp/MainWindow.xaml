@@ -64,7 +64,7 @@
                 <Image Source="{StaticResource image}" Stretch="None">
                     <Image.LayoutTransform>
                         <ScaleTransform ScaleX="{Binding Value, Source={x:Reference slider}}"
-                                        ScaleY="{Binding Value, Source={x:Reference slider}}" />
+                                        ScaleY="{Binding Value, ElementName=slider}" />
                     </Image.LayoutTransform>
                 </Image>
             </ScrollViewer>

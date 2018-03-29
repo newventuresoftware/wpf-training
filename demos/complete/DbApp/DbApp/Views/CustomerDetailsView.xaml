@@ -54,21 +54,39 @@
                                    Palette="Windows8">
             
             <telerik:RadCartesianChart.Series>
-                <telerik:BarSeries ItemsSource="{Binding CustomerProducts}" CategoryBinding="Product" ValueBinding="TotalQuantity">
-                    <telerik:BarSeries.VerticalAxis>
-                        <telerik:LinearAxis HorizontalLocation="Right" Title="Quantity" />
-                    </telerik:BarSeries.VerticalAxis>
-                    <telerik:BarSeries.LegendSettings>
-                        <telerik:SeriesLegendSettings Title="Ordered Quantity by Product" />
-                    </telerik:BarSeries.LegendSettings>
-                </telerik:BarSeries>
                 <telerik:BarSeries ItemsSource="{Binding CustomerProducts}" CategoryBinding="Product" ValueBinding="TotalSpent">
                     <telerik:BarSeries.LegendSettings>
                         <telerik:SeriesLegendSettings Title="Total Spent by Product" />
                     </telerik:BarSeries.LegendSettings>
                 </telerik:BarSeries>
+                
+                <telerik:LineSeries ItemsSource="{Binding CustomerProducts}" CategoryBinding="Product" ValueBinding="TotalQuantity">
+                    <telerik:LineSeries.PointTemplate>
+                        <DataTemplate>
+                            <Ellipse Width="6" Height="6" Fill="White" Stroke="Red" StrokeThickness="1" />
+                        </DataTemplate>
+                    </telerik:LineSeries.PointTemplate>
+                    
+                    <telerik:LineSeries.VerticalAxis>
+                        <telerik:LinearAxis HorizontalLocation="Right" Title="Quantity" />
+                    </telerik:LineSeries.VerticalAxis>
+                    
+                    <telerik:LineSeries.LegendSettings>
+                        <telerik:SeriesLegendSettings Title="Ordered Quantity by Product" />
+                    </telerik:LineSeries.LegendSettings>
+                    
+                    <telerik:LineSeries.RenderOptions>
+                        <telerik:XamlRenderOptions GeometryType="StreamGeometry" DefaultVisualsRenderMode="Batch" />
+                    </telerik:LineSeries.RenderOptions>
+                </telerik:LineSeries>
             </telerik:RadCartesianChart.Series>
-            
+
+            <telerik:RadCartesianChart.PlotAreaStyle>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="#FFFDB3" />
+                </Style>
+            </telerik:RadCartesianChart.PlotAreaStyle>
+
             <telerik:RadCartesianChart.HorizontalAxis>
                 <telerik:CategoricalAxis />
             </telerik:RadCartesianChart.HorizontalAxis>
@@ -76,6 +94,12 @@
             <telerik:RadCartesianChart.VerticalAxis>
                 <telerik:LinearAxis Title="USD" />
             </telerik:RadCartesianChart.VerticalAxis>
+
+            <telerik:RadCartesianChart.Behaviors>
+                <telerik:ChartPanAndZoomBehavior />
+                <telerik:ChartTooltipBehavior />
+                <telerik:ChartTrackBallBehavior />
+            </telerik:RadCartesianChart.Behaviors>
         </telerik:RadCartesianChart>
 
         <telerik:RadLegend Grid.Row="1" Items="{Binding LegendItems, ElementName=chart}" HorizontalAlignment="Center">

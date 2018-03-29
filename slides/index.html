@@ -264,7 +264,6 @@ namespace WpfApp
 <pre><code class="cs">public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector
 {
     internal System.Windows.Controls.TextBlock textBlock;
-     
     private bool _contentLoaded;
     
     public void InitializeComponent() {
@@ -272,7 +271,8 @@ namespace WpfApp
             return;
         }
         _contentLoaded = true;
-        System.Uri resourceLocater = new System.Uri(&quot;/WpfApp;component/mainwindow.xaml&quot;, System.UriKind.Relative);
+        System.Uri resourceLocater = new System.Uri(
+        &quot;/WpfApp;component/mainwindow.xaml&quot;, System.UriKind.Relative);
         
         System.Windows.Application.LoadComponent(this, resourceLocater);
     }
@@ -407,18 +407,9 @@ namespace WpfApp
                     </aside>
                 </section>
                 <section>
-                    <h3>Dependency Property</h3>
-                    <ul class="present">
-                        <li class="fragment">Enables data binding</li>
-                        <li class="fragment">Set trough style</li>
-                        <li class="fragment">Default value</li>
-                        <li class="fragment">Value validation</li>
-                        <li class="fragment">Animation</li>
-                        <li class="fragment">Change Monitoring</li>
-                    </ul>
+                    <h3>Logical and visual tree</h3>
                 </section>
                 <section>
-                    <h3>Logical and visual tree</h3>
 <pre><code data-noescape>&lt;Window&gt;
   &lt;StackPanel&gt;
     &lt;Label Content=&quot;WPF trainging&quot; /&gt;
@@ -444,9 +435,8 @@ namespace WpfApp
                         <p>The logical tree exposed by WPF is a simplification of what is actually going on when the elements are rendered. The entire tree of elements actually being rendered is called the visual tree</p>
                     </aside>
                 </section>
-                <section>
-                    <h3>Visual tree</h3>
-                    <img class="no-border" src="./img/visual-tree.jpg" width="750" />
+                <section data-background-color="#fff">
+                    <img class="no-border" src="./img/visual-tree.jpg" width="850" />
                     <aside class="notes">
                         <p>You can think of the visual tree as an expansion of a logical tree, in which nodes are broken down into their core visual components. Rather than leaving each element as a “black box,” a visual tree exposes the visual implementation details. For example, although a ListBox is logically a single control, its default visual representation is composed of more primitive WPF elements: a Border, two ScrollBars, and more.</p>
                         <p>Not all logical tree nodes appear in the visual tree; only the elements that derive from System.Windows.Media.Visual or System.Windows.Media.Visual3D are included</p>
@@ -488,7 +478,7 @@ namespace WpfApp
                 <section>
                     <h3>Panels</h3>
                 </section>
-                <section>
+                <section data-background-color="#f5f5f5">
                     <img class="no-border" src="./img/stack-panel.png" height="300" />
                     <pre><code data-noescape>&lt;StackPanel Orientation=&quot;Vertical&quot;&gt;
     &lt;Button Content=&quot;Button1&quot; /&gt;
@@ -496,7 +486,7 @@ namespace WpfApp
     &lt;Button Content=&quot;Button3&quot; /&gt;
 &lt;/StackPanel&gt;</code></pre>
                 </section>
-                <section>
+                <section data-background-color="#f5f5f5">
                     <img class="no-border" src="./img/grid-panel.png" height="240" />
                     <pre><code data-noescape>&lt;Grid&gt;
     &lt;Grid.RowDefinitions&gt;
@@ -512,7 +502,7 @@ namespace WpfApp
     &lt;Label Grid.Row=&quot;1&quot; Grid.ColumnSpan=&quot;2&quot; Content=&quot;Third&quot; Background=&quot;Pink&quot; /&gt;
 &lt;/Grid&gt;</code></pre>
                 </section>
-                <section>
+                <section data-background-color="#f5f5f5">
                     <img class="no-border" src="./img/dock-panel.png" height="300" />
                     <pre><code data-noescape>&lt;DockPanel LastChildFill=&quot;True&quot;&gt;
     &lt;Label DockPanel.Dock=&quot;Top&quot; Content=&quot;Dock = Top&quot; Background=&quot;LightBlue&quot; /&gt;
@@ -522,8 +512,7 @@ namespace WpfApp
     &lt;Label Content=&quot;This content will Fill&quot; /&gt;
 &lt;/DockPanel&gt;</code></pre>
                 </section>
-                <section>
-                    <h3>WrapPanel</h3>
+                <section data-background-color="#f5f5f5">
                     <img class="no-border" src="./img/wrap-panel.png" height="300" />
                     <pre><code data-noescape>&lt;WrapPanel ItemWidth=&quot;250&quot; ItemHeight=&quot;150&quot;&gt;
     &lt;Label Content=&quot;Label One&quot; Background=&quot;LightBlue&quot; /&gt;
@@ -531,7 +520,7 @@ namespace WpfApp
     &lt;Label Content=&quot;Label Three&quot; Background=&quot;Pink&quot; /&gt;
 &lt;/WrapPanel&gt;</code></pre>
                 </section>
-                <section>
+                <section data-background-color="#f5f5f5">
                     <img class="no-border" src="./img/canvas-panel.png" height="300" />
                     <pre><code data-noescape>&lt;Canvas&gt;
     &lt;Border Width=&quot;100&quot; Height=&quot;100&quot; Background=&quot;Red&quot; /&gt;
@@ -717,6 +706,17 @@ namespace WpfApp
 &lt;/Style&gt;</code></pre>
                 </section>
                 <section>
+                    <h3>Dependency Property</h3>
+                    <ul class="present">
+                        <li class="fragment">Enables data binding</li>
+                        <li class="fragment">Set trough style</li>
+                        <li class="fragment">Default value</li>
+                        <li class="fragment">Value validation</li>
+                        <li class="fragment">Animation</li>
+                        <li class="fragment">Change Monitoring</li>
+                    </ul>
+                </section>
+                <section>
                     <h3>Data Binding</h3>
                     <img class="no-border" src="./img/binding.png" />
                     <aside class="notes">
@@ -746,12 +746,20 @@ namespace WpfApp
                     </ul>
                 </section>
                 <section>
-                    <h3>Binding Source examples:</h3>
-                    <ul class="present">
-                        <li class="fragment">Another control (Slider, TextBox): <code>{Binding ElementName=slider}</code><code class="fragment">{x:Reference Name=slider}</code></li>
-                        <li class="fragment">Static property: <code>{x:Static local:NamedColor.All}</code></li>
-                        <li class="fragment">Object (ViewModel): <code>{Binding FirstName}</code></li>
-                    </ul>
+                    <h3>Binding Source examples</h3>
+                    <div class="fragment">
+                        <p>Another control (Slider, TextBox)</p>
+                        <pre><code>{Binding ElementName=slider}</code></pre>
+                        <pre class="fragment"><code>{x:Reference Name=slider}</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <p>Static property</p>
+                        <pre><code>{x:Static local:NamedColor.All}</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <p>Object (ViewModel)</p>
+                        <pre><code class="cs">this.DataContext = new int[] { 1, 2, 3 };</code></pre>
+                    </div>
                 </section>
                 <section>
                     <h3>Binding Mode</h3>
@@ -766,7 +774,6 @@ namespace WpfApp
                     <h3>Data templates</h3>
                 </section>
                 <section>
-                    <h3>ItemsControl</h3>
 <pre><code data-noescape>&lt;ItemsControl ItemsSource=&quot;{StaticResource primes}&quot; Width=&quot;350&quot;&gt;
     &lt;ItemsControl.ItemsPanel&gt;
         &lt;ItemsPanelTemplate&gt;
@@ -785,7 +792,6 @@ namespace WpfApp
 &lt;/ItemsControl&gt;</code></pre>
                 </section>
                 <section>
-                    <h3>ContentControl</h3>
 <pre><code data-noescape>&lt;ContentControl Content=&quot;{Binding Path=[1], Source={StaticResource primes}}&quot;&gt;
     &lt;ContentControl.ContentTemplate&gt;
         &lt;DataTemplate&gt;
@@ -798,7 +804,7 @@ namespace WpfApp
 &lt;/ContentControl&gt;</code></pre>
                 </section>
                 <section>
-                    <h3>Automatic Data template selection</h3>
+                    <p><strong>Automatic Data template selection</strong></p>
 <pre><code data-noescape>&lt;ContentControl Content=&quot;{Binding Path=[2], Source={StaticResource brushes}}&quot;&gt;
     &lt;ContentControl.Resources&gt;
         &lt;DataTemplate DataType=&quot;{x:Type SolidColorBrush}&quot;&gt;
@@ -931,22 +937,18 @@ if (response.StatusCode == 200)
             </section>
             <section>
                 <section id="telerik-components" data-background-color="#EFF8FF">
-                    <div style="display: flex; font-size: 18px; justify-content: center">
-                        <div style="margin-right: 10px;">
-                            <strong style="display: table; margin-bottom: 10px;">WPF UI Controls</strong>
-                            <ul>
-                                <li>Data Management</li>
-                                <li>Data Visualization</li>
-                                <li>Scheduling</li>
-                                <li>Layout</li>
-                                <li>Navigation</li>
-                                <li>Media</li>
-                                <li>Editors</li>
-                                <li>File Upload &amp; Management</li>
-                                <li>Interactivity &amp; UX</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h3>WPF UI Controls</h3>
+                    <ul>
+                        <li>Data Management</li>
+                        <li>Data Visualization</li>
+                        <li>Scheduling</li>
+                        <li>Layout</li>
+                        <li>Navigation</li>
+                        <li>Media</li>
+                        <li>Editors</li>
+                        <li>File Upload &amp; Management</li>
+                        <li>Interactivity &amp; UX</li>
+                    </ul>
                     <aside class="notes">
                         <a href="https://www.telerik.com/products/wpf/overview.aspx">Overview</a>
                     </aside>

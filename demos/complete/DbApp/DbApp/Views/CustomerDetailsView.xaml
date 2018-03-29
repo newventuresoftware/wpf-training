@@ -6,6 +6,43 @@
              xmlns:prism="http://prismlibrary.com/" prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" Padding="4">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type telerik:RadLegend}" BasedOn="{StaticResource RadLegendStyle}">
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type telerik:RadLegend}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                Margin="{TemplateBinding Padding}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Text="-=Legend=-" HorizontalAlignment="Center" />
+                                <ItemsControl Grid.Row="1"
+                                              ItemsPanel="{TemplateBinding ItemsPanel}"
+                                              ItemsSource="{TemplateBinding Items}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <telerik:LegendItemControl ContentTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type telerik:RadLegend}}}"
+                                                                       Content="{Binding}"
+                                                                       IsHovered="{Binding IsHovered, Mode=TwoWay}"
+                                                                       VisualState="{Binding VisualState}"/>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

@@ -3,6 +3,7 @@ using DbApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,10 +12,8 @@ namespace DbApp.Services
 {
     public interface ICustomersService
     {
-        Task<ObservableCollection<Customer>> GetCustomersAsync();
-        Task<int> AddCustomerAsync(Customer customer);
-        Task<int> UpdateCustomerAsync(Customer customer);
-        Task<int> DeleteCustomerAsync(Customer customer);
+        Task<BindingList<Customer>> GetCustomersAsync();
+        Task<int> Save();
 
         Customer CreateNewCustomer();
         IList<ProductReport> CreateCustomerProductReports(Customer customer);
@@ -28,7 +27,6 @@ namespace DbApp.Services
         }
 
         private NorthwindEntities context;
-        private ObservableCollection<Customer> cachedCustomers;
 
         public Customer CreateNewCustomer()
         {
@@ -36,36 +34,14 @@ namespace DbApp.Services
             return new Customer(newCustomerDto);
         }
 
-        public async Task<ObservableCollection<Customer>> GetCustomersAsync()
+        public async Task<BindingList<Customer>> GetCustomersAsync()
         {
-            if (cachedCustomers != null)
-                return cachedCustomers;
-
             await context.Customers.LoadAsync();
-            var query = context.Customers.Local.Select(dto => new Customer(dto));
-            cachedCustomers = new ObservableCollection<Customer>(query);
-            return cachedCustomers;
+            return new CustomerBindingList(context.Customers);
         }
 
-        public Task<int> AddCustomerAsync(Customer customer)
+        public Task<int> Save()
         {
-            var dto = customer.ToDto();
-            this.context.Customers.Add(dto);
-            cachedCustomers.Add(customer);
-            return this.context.SaveChangesAsync();
-        }
-
-        public Task<int> UpdateCustomerAsync(Customer customer)
-        {
-            return this.context.SaveChangesAsync();
-        }
-
-        public Task<int> DeleteCustomerAsync(Customer customer)
-        {
-            var dto = customer.ToDto();
-            dto.Orders.Clear();
-            this.context.Customers.Remove(dto);
-            cachedCustomers.Remove(customer);
             return this.context.SaveChangesAsync();
         }
 
@@ -83,6 +59,41 @@ namespace DbApp.Services
                 })
                 .OrderBy(c => c.TotalSpent);
             return query.ToArray();
+        }
+
+        private class CustomerBindingList : BindingList<Customer>
+        {
+            public CustomerBindingList(DbSet<CustomerDTO> customers)
+                : base(customers.Local.Select(dto => new Customer(dto)).ToList())
+            {
+                this.customers = customers;
+            }
+
+            private DbSet<CustomerDTO> customers;
+
+            protected override void ClearItems()
+            {
+                customers.Local.Clear();
+
+                base.ClearItems();
+            }
+
+            protected override void InsertItem(int index, Customer customer)
+            {
+                var dto = customer.ToDto();
+                this.customers.Add(dto);
+
+                base.InsertItem(index, customer);
+            }
+
+            protected override void RemoveItem(int index)
+            {
+                var dto = this[index].ToDto();
+                dto.Orders.Clear();
+                this.customers.Remove(dto);
+
+                base.RemoveItem(index);
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Input;
 
 namespace DbApp.ViewModels
@@ -30,7 +31,7 @@ namespace DbApp.ViewModels
         }
 
         private ICustomersService customersService;
-        private ObservableCollection<Customer> customers;
+        private BindingList<Customer> customers;
         private Customer selectedCustomer;
         private string status;
         private DelegateCommand addNewCommand;
@@ -45,7 +46,7 @@ namespace DbApp.ViewModels
         public IInteractionRequest CustomerInteraction => this.customerUpdateInteraction;
         public IInteractionRequest CustomerDetailsInteraction => this.customerDetailsInteraction;
 
-        public ObservableCollection<Customer> Customers
+        public BindingList<Customer> Customers
         {
             get => this.customers;
             private set
@@ -94,7 +95,8 @@ namespace DbApp.ViewModels
                 int result = 0;
                 try
                 {
-                    result = await this.customersService.AddCustomerAsync(newCustomer);
+                    this.Customers.Add(newCustomer);
+                    result = await this.customersService.Save();
                     Status = $"Added {result} records";
                 }
                 catch (Exception)
@@ -118,7 +120,7 @@ namespace DbApp.ViewModels
                 int result = 0;
                 try
                 {
-                    result = await this.customersService.UpdateCustomerAsync(customer);
+                    result = await this.customersService.Save();
                     Status = $"Updated {result} records";
                 }
                 catch (Exception)
@@ -133,7 +135,8 @@ namespace DbApp.ViewModels
             int result = 0;
             try
             {
-                result = await this.customersService.DeleteCustomerAsync(customer);
+                this.customers.Remove(customer);
+                result = await this.customersService.Save();
                 Status = $"Deleted {result} records";
             }
             catch (Exception)

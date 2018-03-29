@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
+using System.ComponentModel.DataAnnotations;
 
 namespace DbApp.Model
 {
@@ -15,7 +16,7 @@ namespace DbApp.Model
         private Data.CustomerDTO dto;
         private Prism.Mvvm.ErrorsContainer<string> errorsContainer;
 
-        [System.ComponentModel.DataAnnotations.DisplayAttribute(Name = "Customer ID")]
+        [Display(Name = "Customer ID")]
         public string CustomerID
         {
             get => this.dto.CustomerID;
@@ -26,7 +27,7 @@ namespace DbApp.Model
             }
         }
 
-        [System.ComponentModel.DataAnnotations.DisplayAttribute(Name = "Company Name")]
+        [Display(Name = "Company Name")]
         public string CompanyName
         {
             get => this.dto.CompanyName;
@@ -37,10 +38,10 @@ namespace DbApp.Model
             }
         }
 
-        [System.ComponentModel.DataAnnotations.DisplayAttribute(Name = "Contact Name")]
+        [Display(Name = "Contact Name")]
         public string ContactName { get => this.dto.ContactName; set => this.dto.ContactName = value; }
 
-        [System.ComponentModel.DataAnnotations.DisplayAttribute(Name = "Contact Title")]
+        [Display(Name = "Contact Title")]
         public string ContactTitle { get => this.dto.ContactTitle; set => this.dto.ContactTitle = value; }
 
         public string Address { get => this.dto.Address; set => this.dto.Address = value; }
@@ -59,7 +60,7 @@ namespace DbApp.Model
 
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
 
-        [System.ComponentModel.DataAnnotations.DisplayAttribute(AutoGenerateField = false)]
+        [Display(AutoGenerateField = false)]
         public bool HasErrors => errorsContainer.HasErrors;
 
         public System.Collections.IEnumerable GetErrors(string propertyName)

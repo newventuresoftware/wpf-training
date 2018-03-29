@@ -465,6 +465,11 @@ namespace WpfApp
                 </section>
                 <section>
                     <h3>Sizing and Positioning</h3>
+                    <ul class="present">
+                        <li class="fragment">Width &amp; Height</li>
+                        <li class="fragment">HorizontalAlignment &amp; VerticalAlignment</li>
+                        <li class="fragment">Margin &amp; Padding</li>
+                    </ul>
                 </section>
                 <section>
                     <h3>Box Model</h3>
@@ -774,6 +779,18 @@ namespace WpfApp
                     <h3>Data templates</h3>
                 </section>
                 <section>
+<pre><code data-noescape>&lt;ContentControl Content=&quot;{Binding Path=[1], Source={StaticResource primes}}&quot;&gt;
+    &lt;ContentControl.ContentTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;StackPanel Orientation=&quot;Horizontal&quot; Margin=&quot;0 3&quot;&gt;
+                &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;25 0&quot; /&gt;
+                &lt;Button Content=&quot;Click&quot; /&gt;
+            &lt;/StackPanel&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ContentControl.ContentTemplate&gt;
+&lt;/ContentControl&gt;</code></pre>
+                </section>
+                <section>
 <pre><code data-noescape>&lt;ItemsControl ItemsSource=&quot;{StaticResource primes}&quot; Width=&quot;350&quot;&gt;
     &lt;ItemsControl.ItemsPanel&gt;
         &lt;ItemsPanelTemplate&gt;
@@ -790,18 +807,6 @@ namespace WpfApp
         &lt;/DataTemplate&gt;
     &lt;/ItemsControl.ItemTemplate&gt;
 &lt;/ItemsControl&gt;</code></pre>
-                </section>
-                <section>
-<pre><code data-noescape>&lt;ContentControl Content=&quot;{Binding Path=[1], Source={StaticResource primes}}&quot;&gt;
-    &lt;ContentControl.ContentTemplate&gt;
-        &lt;DataTemplate&gt;
-            &lt;StackPanel Orientation=&quot;Horizontal&quot; Margin=&quot;0 3&quot;&gt;
-                &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;25 0&quot; /&gt;
-                &lt;Button Content=&quot;Click&quot; /&gt;
-            &lt;/StackPanel&gt;
-        &lt;/DataTemplate&gt;
-    &lt;/ContentControl.ContentTemplate&gt;
-&lt;/ContentControl&gt;</code></pre>
                 </section>
                 <section>
                     <p><strong>Automatic Data template selection</strong></p>
@@ -863,8 +868,6 @@ namespace WpfApp
                         <li class="fragment">ASMX</li>
                         <li class="fragment">WCF</view>
                         <li class="fragment">REST</li>
-                        <li class="fragment">Azure Mobile App</li>
-                        <li class="fragment">Amazon Web Services</li>
                     </ul>
                 </section>
                 <section>

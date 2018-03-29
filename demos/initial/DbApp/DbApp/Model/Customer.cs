@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Text.RegularExpressions;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace DbApp.Model
 {
-    public class Customer : INotifyDataErrorInfo
+    public class Customer : INotifyDataErrorInfo, IEditableObject
     {
         public Customer(Data.CustomerDTO dto)
         {
@@ -15,6 +15,9 @@ namespace DbApp.Model
 
         private Data.CustomerDTO dto;
         private Prism.Mvvm.ErrorsContainer<string> errorsContainer;
+        public event Action EditBegin;
+        public event Action EditEnd;
+        public event Action EditCancel;
 
         [Display(Name = "Customer ID")]
         public string CustomerID
@@ -104,6 +107,21 @@ namespace DbApp.Model
         private void RaiseErrorsChanged(string propertyName)
         {
             this.ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+        }
+
+        void IEditableObject.BeginEdit()
+        {
+            EditBegin?.Invoke();
+        }
+
+        void IEditableObject.EndEdit()
+        {
+            EditEnd?.Invoke();
+        }
+
+        void IEditableObject.CancelEdit()
+        {
+            EditCancel?.Invoke();
         }
     }
 }

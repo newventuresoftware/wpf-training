@@ -1,23 +1,14 @@
 ﻿using DbApp.Model;
-using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
 using System;
-using System.Windows.Input;
 
 namespace DbApp.ViewModels
 {
     public class CustomerViewModel : BindableBase, IInteractionRequestAware
     {
-        public CustomerViewModel()
-        {
-            _okCommand = new DelegateCommand(OnOk);
-        }
-
         private Confirmation _interaction;
         private Customer _customer;
-        private DelegateCommand _okCommand;
-        private string _okAction;
 
         public INotification Notification
         {
@@ -39,17 +30,28 @@ namespace DbApp.ViewModels
         public Customer Customer
         {
             get => _customer;
-            private set => SetProperty(ref _customer, value);
+            private set
+            {
+                if (_customer != null)
+                {
+                    _customer.EditEnd -= OnEditEnd;
+                    _customer.EditCancel -= OnEditCancel;
+                }
+
+                if (!SetProperty(ref _customer, value))
+                    return;
+
+                if (_customer != null)
+                {
+                    _customer.EditEnd += OnEditEnd;
+                    _customer.EditCancel += OnEditCancel;
+                }
+            }
         }
-
-        public string OkAction { get => _okAction; private set => SetProperty(ref _okAction, value); }
-
-        public ICommand OkCommand => _okCommand;
 
         public void Initialize(Confirmation interaction)
         {
             Customer = interaction.Content as Customer;
-            OkAction = string.IsNullOrEmpty(Customer.CustomerID) ? "Insert" : "Update";
         }
 
         public void CleanUp()
@@ -70,6 +72,16 @@ namespace DbApp.ViewModels
             _interaction.Confirmed = result;
             CleanUp();
             FinishInteraction();
+        }
+
+        private void OnEditCancel()
+        {
+            CompleteInteraction(false);
+        }
+
+        private void OnEditEnd()
+        {
+            OnOk();
         }
     }
 }

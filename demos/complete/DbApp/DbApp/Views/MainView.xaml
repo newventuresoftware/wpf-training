@@ -48,19 +48,26 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <telerik:RadGridView x:Name="grid" ItemsSource="{Binding Source={StaticResource customersViewSource}}"
                              SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}"
-                             CanUserDeleteRows="False" CanUserInsertRows="False" IsReadOnly="True" AutoGenerateColumns="False" EnableRowVirtualization="True">
+                             EnableRowVirtualization="True" AutoGenerateColumns="False" IsReadOnly="True"
+                             ShowColumnFooters="True" ShowGroupPanel="False">
             <telerik:RadGridView.Columns>
-                <telerik:GridViewDataColumn Header="Address" DataMemberBinding="{Binding Address}"/>
+                <telerik:GridViewDataColumn Header="Address" DataMemberBinding="{Binding Address}">
+                    <telerik:GridViewDataColumn.AggregateFunctions>
+                        <telerik:CountFunction Caption="Total # of records: " />
+                    </telerik:GridViewDataColumn.AggregateFunctions>
+                </telerik:GridViewDataColumn>
+                
                 <telerik:GridViewDataColumn Header="City" DataMemberBinding="{Binding City}"/>
                 <telerik:GridViewDataColumn Header="Company Name" DataMemberBinding="{Binding CompanyName}"/>
                 <telerik:GridViewDataColumn Header="Contact Name" DataMemberBinding="{Binding ContactName}"/>
                 <telerik:GridViewDataColumn Header="Contact Title" DataMemberBinding="{Binding ContactTitle}"/>
                 <telerik:GridViewDataColumn Header="Country" DataMemberBinding="{Binding Country}"/>
-                <telerik:GridViewDataColumn Header="Customer ID" DataMemberBinding="{Binding CustomerID}"/>
+                <telerik:GridViewDataColumn Header="Customer ID" DataMemberBinding="{Binding CustomerID}" />
                 <telerik:GridViewDataColumn Header="Fax" DataMemberBinding="{Binding Fax}"/>
                 <telerik:GridViewDataColumn Header="Phone" DataMemberBinding="{Binding Phone}"/>
                 <telerik:GridViewDataColumn Header="Postal Code" DataMemberBinding="{Binding PostalCode}"/>
@@ -74,27 +81,11 @@
                 </telerik:GridViewColumn>
             </telerik:RadGridView.Columns>
         </telerik:RadGridView>
-        
-        <!--<DataGrid x:Name="grid" ItemsSource="{Binding Source={StaticResource customersViewSource}}"
-                  SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}"
-                  RowDetailsVisibilityMode="VisibleWhenSelected" EnableRowVirtualization="True" AutoGenerateColumns="False"
-                  CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
-                <DataGridTextColumn Header="City" Binding="{Binding City}"/>
-                <DataGridTextColumn Header="Company Name" Binding="{Binding CompanyName}"/>
-                <DataGridTextColumn Header="Contact Name" Binding="{Binding ContactName}"/>
-                <DataGridTextColumn Header="Contact Title" Binding="{Binding ContactTitle}"/>
-                <DataGridTextColumn Header="Country" Binding="{Binding Country}"/>
-                <DataGridTextColumn Header="Customer ID" Binding="{Binding CustomerID}"/>
-                <DataGridTextColumn Header="Fax" Binding="{Binding Fax}"/>
-                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
-                <DataGridTextColumn Header="Postal Code" Binding="{Binding PostalCode}"/>
-                <DataGridTextColumn Header="Region" Binding="{Binding Region}"/>
-            </DataGrid.Columns>
-        </DataGrid>-->
 
-        <DockPanel Grid.Row="1" LastChildFill="False">
+        <telerik:RadDataPager Grid.Row="1" Source="{Binding Items, ElementName=grid}"
+                              PageSize="10" DisplayMode="FirstLastPreviousNextNumeric" />
+
+        <DockPanel Grid.Row="2" LastChildFill="False">
             <DockPanel.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Width" Value="150" />

@@ -19,6 +19,7 @@ namespace DbApp.ViewModels
         private DelegateCommand _okCommand;
         private string _okAction;
 
+        // <Prism.IInteractionRequestAware>
         public INotification Notification
         {
             get => _interaction;
@@ -35,24 +36,23 @@ namespace DbApp.ViewModels
                     Initialize(_interaction);
             }
         }
+
         public Action FinishInteraction { get; set; }
-        public Customer Customer
-        {
-            get => _customer;
-            private set => SetProperty(ref _customer, value);
-        }
+        // </Prism.IInteractionRequestAware>
+
+        public Customer Customer { get => _customer; private set => SetProperty(ref _customer, value); }
 
         public string OkAction { get => _okAction; private set => SetProperty(ref _okAction, value); }
 
         public ICommand OkCommand => _okCommand;
 
-        public void Initialize(Confirmation interaction)
+        private void Initialize(Confirmation interaction)
         {
             Customer = interaction.Content as Customer;
             OkAction = string.IsNullOrEmpty(Customer.CustomerID) ? "Insert" : "Update";
         }
 
-        public void CleanUp()
+        private void CleanUp()
         {
             Customer = null;
         }

@@ -4,6 +4,9 @@ using Prism.Regions;
 
 namespace DbApp
 {
+    /// <summary>
+    /// Defines the Application prism module
+    /// </summary>
     public class ApplicationModule : IModule
     {
         public ApplicationModule(IRegionManager regionManager, IUnityContainer container)

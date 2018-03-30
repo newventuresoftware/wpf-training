@@ -16,6 +16,7 @@ namespace DbApp.ViewModels
         private ICustomersService _customersService;
         private INotification _interaction;
 
+        // <Prism.IInteractionRequestAware>
         public INotification Notification
         {
             get => _interaction;
@@ -28,7 +29,9 @@ namespace DbApp.ViewModels
                 ShowCustomer(_interaction.Content as Customer);
             }
         }
+
         public Action FinishInteraction { get; set; }
+        // </Prism.IInteractionRequestAware>
 
         private void ShowCustomer(Customer customer)
         {

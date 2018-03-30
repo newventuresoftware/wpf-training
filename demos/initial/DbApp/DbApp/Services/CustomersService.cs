@@ -2,7 +2,6 @@
 using DbApp.Model;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
@@ -34,17 +33,28 @@ namespace DbApp.Services
             return new Customer(newCustomerDto);
         }
 
+        /// <summary>
+        /// Gets all the Customers from the underlying database in a
+        /// convenient BindingList that supports CRUD.
+        /// </summary>
         public async Task<BindingList<Customer>> GetCustomersAsync()
         {
             await context.Customers.LoadAsync();
             return new CustomerBindingList(context.Customers);
         }
 
+        /// <summary>
+        /// Saves the changes made to the database.
+        /// </summary>
+        /// <returns>Number of updates</returns>
         public Task<int> Save()
         {
             return this.context.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Create a ordered products report for a given customer
+        /// </summary>
         public IList<ProductReport> CreateCustomerProductReports(Customer customer)
         {
             var dto = customer.ToDto();
@@ -61,6 +71,9 @@ namespace DbApp.Services
             return query.ToArray();
         }
 
+        /// <summary>
+        /// Keeps DbSet<CustomerDTO> in sync with a local collection of List<Customer>.
+        /// </summary>
         private class CustomerBindingList : BindingList<Customer>
         {
             public CustomerBindingList(DbSet<CustomerDTO> customers)

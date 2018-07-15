@@ -1,0 +1,23 @@
+﻿<Application x:Class="WpfTemplateApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <x:Array x:Key="brushes" Type="{x:Type Brush}">
+            <SolidColorBrush>Red</SolidColorBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="Red" Offset="0" />
+                <GradientStop Color="Blue" Offset="1" />
+            </LinearGradientBrush>
+        </x:Array>
+
+        <x:Array x:Key="primes" Type="{x:Type sys:Int32}">
+            <sys:Int32>2</sys:Int32>
+            <sys:Int32>3</sys:Int32>
+            <sys:Int32>5</sys:Int32>
+            <sys:Int32>7</sys:Int32>
+            <sys:Int32>11</sys:Int32>
+        </x:Array>
+    </Application.Resources>
+</Application>

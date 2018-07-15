@@ -4,7 +4,6 @@ using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
 using System;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
 
@@ -43,7 +42,10 @@ namespace DbApp.ViewModels
         public ICommand EditCustomerCommand => this.editCustomerCommand;
         public ICommand DeleteCustomerCommand => this.deleteCustomerCommand;
         public ICommand CustomerDetailsCommand => this.detailsCommand;
+
+        // Requests the CustomerView for customer information update
         public IInteractionRequest CustomerInteraction => this.customerUpdateInteraction;
+        // Requests the CustomerDetailsView
         public IInteractionRequest CustomerDetailsInteraction => this.customerDetailsInteraction;
 
         public BindingList<Customer> Customers
@@ -70,16 +72,19 @@ namespace DbApp.ViewModels
             private set => SetProperty(ref this.status, value);
         }
 
+        // DeleteCustomerCommand.CanExecute
         private bool CanDeleteCustomer(Customer customer)
         {
             return customer != null;
         }
 
+        // EditCustomerCommand.CanExecute
         private bool CanEditCustomer(Customer customer)
         {
             return customer != null;
         }
 
+        // AddNewCustomerCommand.Execute
         private void AddNewCustomer()
         {
             Customer newCustomer = customersService.CreateNewCustomer();
@@ -106,6 +111,7 @@ namespace DbApp.ViewModels
             });
         }
 
+        // EditCustomerCommand.Execute
         private void EditCustomer(Customer customer)
         {
             customerUpdateInteraction.Raise(new Confirmation()
@@ -130,6 +136,7 @@ namespace DbApp.ViewModels
             });
         }
 
+        // DeleteCustomerCommand.Execute
         private async void DeleteCustomer(Customer customer)
         {
             int result = 0;
@@ -145,6 +152,7 @@ namespace DbApp.ViewModels
             }
         }
 
+        // CustomerDetailsCommand.Execute
         private void ShowDetails(Customer customer)
         {
             customerDetailsInteraction.Raise(new Notification()

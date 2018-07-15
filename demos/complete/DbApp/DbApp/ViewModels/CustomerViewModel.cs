@@ -1,15 +1,22 @@
 ﻿using DbApp.Model;
+using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
 using System;
+using System.Windows.Input;
 
 namespace DbApp.ViewModels
 {
     public class CustomerViewModel : BindableBase, IInteractionRequestAware
     {
+        public CustomerViewModel()
+        {
+        }
+
         private Confirmation _interaction;
         private Customer _customer;
 
+        // <Prism.IInteractionRequestAware>
         public INotification Notification
         {
             get => _interaction;
@@ -26,7 +33,10 @@ namespace DbApp.ViewModels
                     Initialize(_interaction);
             }
         }
+
         public Action FinishInteraction { get; set; }
+        // </Prism.IInteractionRequestAware>
+
         public Customer Customer
         {
             get => _customer;
@@ -49,12 +59,12 @@ namespace DbApp.ViewModels
             }
         }
 
-        public void Initialize(Confirmation interaction)
+        private void Initialize(Confirmation interaction)
         {
             Customer = interaction.Content as Customer;
         }
 
-        public void CleanUp()
+        private void CleanUp()
         {
             Customer = null;
         }

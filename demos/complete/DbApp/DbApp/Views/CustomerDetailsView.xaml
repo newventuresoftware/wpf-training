@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:prism="http://prismlibrary.com/" prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" Padding="4">
@@ -48,33 +48,30 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        
-        <telerik:RadCartesianChart x:Name="chart"
-                                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                   Palette="Windows8">
-            
+
+        <telerik:RadCartesianChart x:Name="chart" Palette="Windows8">
             <telerik:RadCartesianChart.Series>
                 <telerik:BarSeries ItemsSource="{Binding CustomerProducts}" CategoryBinding="Product" ValueBinding="TotalSpent">
                     <telerik:BarSeries.LegendSettings>
                         <telerik:SeriesLegendSettings Title="Total Spent by Product" />
                     </telerik:BarSeries.LegendSettings>
                 </telerik:BarSeries>
-                
+
                 <telerik:LineSeries ItemsSource="{Binding CustomerProducts}" CategoryBinding="Product" ValueBinding="TotalQuantity">
                     <telerik:LineSeries.PointTemplate>
                         <DataTemplate>
                             <Ellipse Width="6" Height="6" Fill="White" Stroke="Red" StrokeThickness="1" />
                         </DataTemplate>
                     </telerik:LineSeries.PointTemplate>
-                    
+
                     <telerik:LineSeries.VerticalAxis>
                         <telerik:LinearAxis HorizontalLocation="Right" Title="Quantity" />
                     </telerik:LineSeries.VerticalAxis>
-                    
+
                     <telerik:LineSeries.LegendSettings>
                         <telerik:SeriesLegendSettings Title="Ordered Quantity by Product" />
                     </telerik:LineSeries.LegendSettings>
-                    
+
                     <telerik:LineSeries.RenderOptions>
                         <telerik:XamlRenderOptions GeometryType="StreamGeometry" DefaultVisualsRenderMode="Batch" />
                     </telerik:LineSeries.RenderOptions>
@@ -95,10 +92,13 @@
                 <telerik:LinearAxis Title="USD" />
             </telerik:RadCartesianChart.VerticalAxis>
 
+            <telerik:RadCartesianChart.Grid>
+                <telerik:CartesianChartGrid MajorLinesVisibility="Y" StripLinesVisibility="Y" />
+            </telerik:RadCartesianChart.Grid>
+
             <telerik:RadCartesianChart.Behaviors>
                 <telerik:ChartPanAndZoomBehavior />
                 <telerik:ChartTooltipBehavior />
-                <telerik:ChartTrackBallBehavior />
             </telerik:RadCartesianChart.Behaviors>
         </telerik:RadCartesianChart>
 

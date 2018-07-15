@@ -7,9 +7,5 @@
              x:Class="DbApp.Views.CustomerView"
              mc:Ignorable="d" Padding="3"
              d:DesignHeight="450" d:DesignWidth="400">
-    <Grid>
-        <telerik:RadDataForm CurrentItem="{Binding Customer}">
-
-        </telerik:RadDataForm>
-    </Grid>
+    <telerik:RadDataForm CurrentItem="{Binding Customer}" />
 </UserControl>

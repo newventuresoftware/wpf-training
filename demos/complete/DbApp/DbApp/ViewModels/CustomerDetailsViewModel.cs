@@ -16,9 +16,9 @@ namespace DbApp.ViewModels
 
         private ICustomersService _customersService;
         private INotification _interaction;
-        private Customer _customer;
         private IList<ProductReport> _customerProducts;
 
+        // <Prism.IInteractionRequestAware>
         public INotification Notification
         {
             get => _interaction;
@@ -28,23 +28,22 @@ namespace DbApp.ViewModels
                     return;
                 _interaction = value;
 
-                Customer = _interaction.Content as Customer;
-                if (Customer != null)
-                    CustomerProducts = _customersService.CreateCustomerProductReports(Customer);
+                ShowCustomer(_interaction.Content as Customer);
             }
         }
-        public Action FinishInteraction { get; set; }
 
-        public Customer Customer
-        {
-            get => _customer;
-            private set => SetProperty(ref _customer, value);
-        }
+        public Action FinishInteraction { get; set; }
+        // </Prism.IInteractionRequestAware>
 
         public IList<ProductReport> CustomerProducts
         {
             get => _customerProducts;
             private set => SetProperty(ref _customerProducts, value);
+        }
+
+        private void ShowCustomer(Customer customer)
+        {
+            CustomerProducts = _customersService.CreateCustomerProductReports(customer);
         }
     }
 }

@@ -3,6 +3,9 @@ using System.Windows;
 
 namespace DbApp
 {
+    /// <summary>
+    /// Bootstraps the Prism infrastructure
+    /// </summary>
     public class Bootstrapper : Prism.Unity.UnityBootstrapper
     {
         protected override DependencyObject CreateShell()

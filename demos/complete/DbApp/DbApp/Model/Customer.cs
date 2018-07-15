@@ -15,6 +15,7 @@ namespace DbApp.Model
 
         private Data.CustomerDTO dto;
         private Prism.Mvvm.ErrorsContainer<string> errorsContainer;
+
         public event Action EditBegin;
         public event Action EditEnd;
         public event Action EditCancel;
@@ -71,6 +72,9 @@ namespace DbApp.Model
             return errorsContainer.GetErrors(propertyName);
         }
 
+        /// <summary>
+        /// Checks the validity of this customer.
+        /// </summary>
         public bool Validate()
         {
             // CustomerID validation
